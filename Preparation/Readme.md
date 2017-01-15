@@ -1,7 +1,7 @@
 # Vorbereitung
 
 Für den Workshop werden Grundkenntnisse im Umgang mit RabbitMQ und der .NET-Bibliothek EasyNetQ vorausgesetzt.
-Auf dieser Seite und den verknüpften Beispielprojekt könnt ihr diese Kenntnisse erhalten oder auffrischen.
+Auf dieser Seite und den verknüpften Beispielprojekten könnt ihr diese Kenntnisse erhalten oder auffrischen.
 
 # RabbitMQ
 ## Was ist RabbitMQ?
