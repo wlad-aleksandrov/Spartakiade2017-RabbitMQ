@@ -47,6 +47,6 @@ Je nach Anwendungsfall kommen verschiedene Exchange-Typen zum Einsatz.
 
 ## Nachrichtentransport
 
-<img src="images/MessageFlow.svg" alt="Übersicht Nachrichtentransport" />
+<img src="../images/MessageFlow.png" alt="Übersicht Nachrichtentransport" />
  
 # EasyNetQ
