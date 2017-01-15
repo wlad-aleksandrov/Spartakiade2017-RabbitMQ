@@ -84,8 +84,8 @@ In der gestarteten Instanz ist auch das Management Plugin aktiv (<a href="https:
 
 Wichtig: alle Beispiele sind mit .Net Core erstellt. Das benötigte Nuget-Paket ist noch eine Vorabversion und kann auf MyGet abgerufen werden. Dazu bitte eine Paketquelle mit der Url https://www.myget.org/F/easynetq-unstable/api/v3/index.json im Visual Studio ergänzen.
 
-- <a href="Connecting/Readme.md">Verbindungaufbau</a>
+- <a href="Connecting/">Verbindungaufbau</a>
 - Messaging Pattern
-    - <a href="PublishSubscribe/Readme.md">Publish - Subscribe</a>
-    - <a href="RequestResponse/Readme.md">Request - Response</a>
-    - <a href="TopicBasedRouting/Readme.md">Topic Based Routing</a>
+    - <a href="PublishSubscribe/">Publish - Subscribe</a>
+    - <a href="RequestResponse/">Request - Response</a>
+    - <a href="TopicBasedRouting/">Topic Based Routing</a>
