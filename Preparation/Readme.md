@@ -46,7 +46,46 @@ Je nach Anwendungsfall kommen verschiedene Exchange-Typen zum Einsatz.
     - Routing anhand von Headerinformationen der Nachricht
 
 ## Nachrichtentransport
+TBD: Beschreibung für Nachrichtentransport
 
-<img src="../images/MessageFlow.png" alt="Übersicht Nachrichtentransport" />
+<img src="../images/MessageFlow.png" height=250px  alt="Übersicht Nachrichtentransport" />
  
 # EasyNetQ
+EasyNetQ ist eine .Net Bibliothek die den Zugriff auf RabbitMQ gestartet. Sie baut dabei auf die Standardibliothek von RabbitMQ auf.
+
+Dabei ist EasyNetQ:
+- Einfach
+- Open Source (Github: <a href="https://github.com/EasyNetQ/EasyNetQ" target="_blank">https://github.com/EasyNetQ/EasyNetQ</a>)
+- Modular
+
+## Funktionen
+- Messaging Pattern, z.B. Publish/Subscriber
+- Routing Strategien
+- Serialisierung / Deserialisierung als JSON (lesbar)
+- Handling von Thread für Konsumenten
+- Subscriber Reconnect
+- QoS / publisher confirm
+- Fehlerbehandlung
+
+## API Design
+TBD: Beschreibung für API
+
+<img src="../images/EasyNetQ.png" alt="API Design EasyNetQ" height=250px />
+
+## Beispiele
+Für alle Beispiele wird eine aktive Instanz des RabbitMQ benötigt. Im Workshop und auch für die Verbereitung empfehle ich RabbitMQ als Docker-Conatiner zu starten.
+Als Dockerumgebung unter Windows eignet sich z.B. <a href="https://www.docker.com/products/docker-toolbox" target="_blank">Docker-Toolbox</a> oder <a href="https://docs.docker.com/docker-for-windows/" target="_blank"> Docker for Windows</a>.
+
+Die Instanz wird mit dem folgenden Befehl gestartet:
+
+    docker run -d --hostname myRabbit --name myRabbit -p 5672:5672 -p 15672:15672 rabbitmq:3-management
+
+In der gestarteten Instanz ist auch das Management Plugin aktiv (<a href="https://www.rabbitmq.com/management.html" alt="Infoseite Management PlugIn" target="_blank">Infos</a>) . Zur Anzeige der Management-Oberfläche bitte im Webbrowser <a href="http://localhost:15672" target="_blank"> http://localhost:15672</a> aufrufen. Benutzername und Passwort sind per Default guest:guest.
+
+Wichtig: alle Beispiele sind mit .Net Core erstellt. Das benötigte Nuget-Paket ist noch eine Vorabversion und kann auf MyGet abgerufen werden. Dazu bitte eine Paketquelle mit der Url https://www.myget.org/F/easynetq-unstable/api/v3/index.json im Visual Studio ergänzen.
+
+- <a href="Connecting/Readme.md">Verbindungaufbau</a>
+- Messaging Pattern
+    - <a href="PublishSubscribe/Readme.md">Publish - Subscribe</a>
+    - <a href="RequestResponse/Readme.md">Request - Response</a>
+    - <a href="TopicBasedRouting/Readme.md">Topic Based Routing</a>
