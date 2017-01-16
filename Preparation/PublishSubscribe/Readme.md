@@ -20,7 +20,9 @@ In diesem Beispiel sind sowohl ein einfaches Beispiel als auch ein Beispiel mit 
 Zum Starten den Methodenaufruf  _SimpleSubscription_ bzw. _PolymorphicSubscription_ in der Main-Methode einkommentieren.
 
 ### SimpleSubscription
-Ziel ist ein Objekt vom Typ _MyMessage_ vom Producer zum Consumer zu übertragen und auf der Konsole auszugeben.
+Ziel ist ein Objekt vom Typ _MyMessage_ vom Producer zum Consumer zu übertragen und auf der Konsole auszugeben. Das mit der Eingabe aus der Konsole erstellt und übertragen.
+
+Hinweis: jede Subscription benötigt ein eindeutige Id. Diese ist Teil des Queuename - muss aber beim senden nicht angegeben werden.
 
 ### PolymorphicSubscription
 
