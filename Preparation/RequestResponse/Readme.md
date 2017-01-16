@@ -15,4 +15,4 @@
     var result = await myBus.RequestAsync<MyClass1,MyClass2>(req);
 
 ## Beispiel
-TBD: Beschreibung
+Ziel ist es die zwei Zahlen aus dem Objekt des Typs MyRequest zu addieren und als Objekt des Typs MyResponse zurückzugeben. Das Ergebnis wird anschließend auf der Konsole ausgegeben. Sie ist auch die Quelle der zwei Zahlen für die Eingabe.

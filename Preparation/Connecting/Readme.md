@@ -1,5 +1,5 @@
 # Verbindungsaufbau
-Im Beispiel geht es darum eine Verbindung zu RabbitMQ aufzubauen. Bei EasyNetQ für dafür die Factory _RabbitHutch_ verwendet. Die instanzspezifischen Informationen werden im Connectionstring angegeben.
+Im Beispiel geht es darum eine Verbindung zu RabbitMQ aufzubauen. Bei EasyNetQ wird dafür die Factory _RabbitHutch_ verwendet. Die instanzspezifischen Informationen werden im Connectionstring angegeben.
 
     var myBus = RabbitHutch.CreateBus("host=myRabbitMQ");
 
