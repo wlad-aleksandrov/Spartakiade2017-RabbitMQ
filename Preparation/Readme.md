@@ -46,7 +46,9 @@ Je nach Anwendungsfall kommen verschiedene Exchange-Typen zum Einsatz.
     - Routing anhand von Headerinformationen der Nachricht
 
 ## Nachrichtentransport
-TBD: Beschreibung für Nachrichtentransport
+Der Nachrichtenfluss erfolgt vom Producer zum Consumer. Der Producer stellt eine Verbindung zum RabbitMQ (=Broker) her. Dazu muss er sich ggf. mit Benutzername und Passwort au­then­ti­fi­zie­ren. Bei der Übergabe der Nachrichten gibt er den Exchange an.
+Diese erhält bei Direct Exchange sowie beim Typ Topic einen Routing Key. Desssen Auswertung führt zu einer Nachrichtenzustellung über das Binding in die jeweilige Queue. Dort verbleibt die Nachricht bis der Consumer diese abruft.
+Die Sonderform Fanout Exchage führt zu einer ungefilterten Ablage in alle Queues.
 
 <img src="../images/MessageFlow.png" height=250px  alt="Übersicht Nachrichtentransport" />
  
@@ -68,7 +70,7 @@ Dabei ist EasyNetQ:
 - Fehlerbehandlung
 
 ## API Design
-TBD: Beschreibung für API
+Die API von EasyNetQ besteht aus 2 bzw. 3 Schichten. Die unterste Schicht bildet immer der Client von RabbitMQ. Dieser enthält die echte Netzwerkkommunikation. Darauf baut der IAdancedBus auf. Dieser kapselt Kernfunktionen wie das Connection Management, das Error Handling und die Serialization. All diese Funktionen sind als Interfaces definiert und können bei Bedarf ersetzt werden. So könnte man den Standard-JSON-Serializer gegen einen eigenen XML-basierten Serializer ersetzen. Mehr Komfort, aber auch etwas mehr Overhead, erlaubt die Schicht IBus. Sie stellt u.a. die Messaging Pattern bereit. Die eigene Anwendung kann entweder das Schicht 2 (IAdancedBus) bzw. Schicht 3 (IBus) aufsetzen. Ich persönlich hatte bisher kaum eine Notwendigkeit den IAdancedBus zu nutzen und setze auf den IBus mit den Messaging Pattern.
 
 <img src="../images/EasyNetQ.png" alt="API Design EasyNetQ" height=250px />
 
