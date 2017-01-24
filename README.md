@@ -33,13 +33,15 @@ Die folgende Liste gibt einen Überblick über mögliche Themen.
 
 
 Hinweis: In diesem Workshop wird Docker für die Bereitstellung der Infrastuktur z.b. Datenbank oder Nodes für RabbitMQ-Cluster verwendet. Kenntnisse in Docker sind von Vorteil aber keine Voraussetzung.
-Der Fokus liegt des Workshops liegt auf der Implementierung der .Net-Microservices.
+Der Fokus liegt des Workshops liegt auf der Implementierung der .Net-Microservices und der Arbeit mit RabbitMQ.
 
 <a name="voraussetzungen"></a>
 3. Teilnehmer-Voraussetzungen / Vorbereitung
+
 [x] Notebook mit 2015 mit Update 3 (z.B. <a href="https://www.visualstudio.com/de-de/downloads/download-visual-studio-vs.aspx">Community Edition</a>)<br/>
 [x] <a href="https://www.microsoft.com/net/core">.NET Core mit VS 2015 Tooling</a></br>
 [x] Dockerumgebung z.B. <a href="https://www.docker.com/products/docker-toolbox">Docker-Toolbox</a> oder <a href="https://docs.docker.com/docker-for-windows/"> Docker for Windows</a>
+[x] Netzwerkkabel ca. 3 bis 5 m
 
 Um die korrekte Funktion der Dockerumgebung zu testen startet bitte die <a href="startupApp.md" > StartUp-App </a>.
 
