@@ -30,7 +30,7 @@ Die folgende Liste gibt einen Überblick über mögliche Themen.
 - Beispiele
    - Image-Workflow
    - PHP2Net
-
+   - RabbitMQ IoC-Hub
 
 Hinweis: In diesem Workshop wird Docker für die Bereitstellung der Infrastuktur z.b. Datenbank oder Nodes für RabbitMQ-Cluster verwendet. Kenntnisse in Docker sind von Vorteil aber keine Voraussetzung.
 Der Fokus liegt des Workshops liegt auf der Implementierung der .Net-Microservices und der Arbeit mit RabbitMQ.
