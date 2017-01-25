@@ -5,14 +5,10 @@ services:
 
   mongo:
     image: mongo:3.2
-
   
   core:
     image: fpommerening/spartakiade2017-rabbitmq:core-base
-
-  image-db:
-    image: fpommerening/spartakiade2017-rabbitmq:picflow-database
-
+    
   web:
     depends_on:
       - rabbitmq
