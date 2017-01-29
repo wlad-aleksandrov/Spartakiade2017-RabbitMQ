@@ -40,7 +40,7 @@ Der Fokus liegt des Workshops liegt auf der Implementierung der .Net-Microservic
 
 [x] Notebook mit 2015 mit Update 3 (z.B. <a href="https://www.visualstudio.com/de-de/downloads/download-visual-studio-vs.aspx">Community Edition</a>)<br/>
 [x] <a href="https://www.microsoft.com/net/core">.NET Core mit VS 2015 Tooling</a></br>
-[x] Dockerumgebung z.B. <a href="https://www.docker.com/products/docker-toolbox">Docker-Toolbox</a> oder <a href="https://docs.docker.com/docker-for-windows/"> Docker for Windows</a>
+[x] Dockerumgebung z.B. <a href="https://www.docker.com/products/docker-toolbox">Docker-Toolbox</a> oder <a href="https://docs.docker.com/docker-for-windows/"> Docker for Windows</a><br/>
 [x] Netzwerkkabel ca. 3 bis 5 m
 
 Um die korrekte Funktion der Dockerumgebung zu testen startet bitte die <a href="startupApp.md" > StartUp-App </a>.
