@@ -84,7 +84,43 @@
                     ImageProcessor: <a href="https://www.myget.org/F/imageprocessor/api/v3/index.json"> https://www.myget.org/F/imageprocessor/api/v3/index.json</a>
                 </section>
 			</section>
-
+			<section>
+				<section>
+                     <h2>Image-Workflow</h2>
+                     <img src="images/ImageProcessing.svg"  style="border:0px;width:800px" alt="Übersicht Nachrichtentransport">
+                 </section>
+				<section>
+					<h3>Freischalten Build-Script</h3>
+					    <pre><code class="powershell">
+Set-ExecutionPolicy RemoteSigned
+                    </code></pre>
+					Infos <a href="https://technet.microsoft.com/de-de/library/ee176961.aspx" target="_blank"> Microsoft Technet</a>
+				</section>
+				<section>
+                     <h3>WebApp </h3>
+                     <ul>
+                        <li>Anfragen zur Authentifzierung versenden</li>
+                        <li>Authentifzierungsantworten empfangen und in AuthenticationRepository verarbeiten</li>
+                        <li>Verarbeitungsjob mit Folgeschritten erstellen und versenden</li>
+                     </ul>
+                 </section>
+                 <section>
+                     <h3>Authorization / Uploader  </h3>
+                     <ul>
+                         <li>Anfragen zur Authentifzierung empfangen und Benutzerdaten gegen UserRepository prüfen</li>
+                         <li>Authentifzierungsantworten mit Prüfergebnis versenden</li>
+                         <li>Versandjobs an externe Anwendung empfangen und per HTTP übertragen</li>
+                     </ul>
+                </section>
+                <section>
+                    <h3>Image Prozessor / Image Persitor</h3>
+                    <ul>
+                        <li>Verarbeitungsjob empfangen und an Grafikverarbeitung übergeben</li>
+                        <li>Folgejobs an Persitor / Uploader versenden</li>
+                        <li>Grafiken für den Benutzer speichern</li>
+                    </ul>
+                  </section>
+			</section>
 
 			</div>
 		</div>
