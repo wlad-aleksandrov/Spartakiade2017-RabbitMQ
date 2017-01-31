@@ -1,6 +1,6 @@
 FROM mono:4.6.1
 MAINTAINER Frank Pommerening "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-01-25
+ENV REFRESHED_AT 2017-01-31
 ENV StartupApp_VERSION 0.0.1
 
 RUN set -x \
