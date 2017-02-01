@@ -75,7 +75,7 @@
 				<section>
                     <h2>Vorbereitung</h2>
                     <h3>Startup-App</h3>
-                    Info: <a href="https://goo.gl/RpJvAg">https://goo.gl/RpJvAg</a>
+                    Info: <a href="https://goo.gl/x3jJbr">https://goo.gl/x3jJbr</a>
                     <br />
                     <br />
                     <h3>MyGet-Feeds</h3>
@@ -84,6 +84,192 @@
                     ImageProcessor: <a href="https://www.myget.org/F/imageprocessor/api/v3/index.json"> https://www.myget.org/F/imageprocessor/api/v3/index.json</a>
                 </section>
 			</section>
+            <section>
+                <section>
+                    <h2>EasyNetQ </h2>
+                    <h3 class="fragment">short revision ?!</h3>
+                </section>
+                <section>
+                    <h2>EasyNetQ</h2>
+                    <img src="images/logo_easynetq.png" style="border:0px" alt="Logo EasyNetQ">
+                    <ul>
+                        <li>Einfach</li>
+                        <li>Open Source</li>
+                        <li>Modular</li>
+                    <br />
+                    </ul>
+                    </br>
+                    </br>
+                    Nuget: <a href="https://www.nuget.org/packages/EasyNetQ/" target="_blank">EasyNetQ</a></br>
+                    Github: <a href="https://github.com/EasyNetQ/EasyNetQ" target="_blank">https://github.com/EasyNetQ/EasyNetQ</a>
+                </section>
+            
+            <section>
+                    <h3>Vorteile</h3>
+                    <ul>
+                        <li>Messaging Pattern, z.B. Publish/Subscribe </li>
+                        <li>Routing Strategien</li>
+                        <li>Serialisierung / Deserialisierung als JSON (lesbar)</li>
+                        <li>Handling von Thread für Konsumenten</li>
+                        <li>Subscriber Reconnect</li>
+                        <li>QoS / publisher confirm</li>
+                        <li>Fehlerbehandlung</li>
+                    </ul>
+                </section>
+                 <section>
+                    <h3>API Design</h3>
+                    <img src="images/EasyNetQ.svg" alt="API EasyNETQ" style="border:0px">
+                </section>
+                <section>
+                    <h3>Verbindungsaufbau</h3>
+                    <pre><code class="cs">
+using System;
+using EasyNetQ;
+
+namepace FP.MsRmq.Connecting
+{
+    public class Programm
+    {
+        public static void Main(string[] args)
+        {
+            var myBus = RabbitHutch.CreateBus("host=myRabbitMQ");
+        }
+    }
+}
+</code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Verbindungsoptionen</h3>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Option</th>
+                                <th>Standardwert</th>
+                                <th>Bemerkung</th>
+                        </thead>
+						<tbody>
+							<tr>
+								<td>host</td>
+                                <td>5672</td>
+                                <td>DNS-Name/IP[:Port]</td>
+							</tr>
+							<tr>
+								<td>username</td>
+                                <td>guest</td>
+                                <td></td>								
+							</tr>
+							<tr>
+								<td>passwort</td>
+								<td>guest</td>
+                                <td></td>
+							</tr>
+                            <tr>
+                                <td>prefetchcount</td>
+                                <td>50</td>
+                                <td>Anzahl der Nachrichten, die gleichzeitig abgerufen werden</td>
+                            </tr>
+                            <tr>
+                                <td>timeout</td>
+                                <td>10</td>
+                                <td>timeout in Sekunden</td>
+                            </tr>
+                            <tr>
+                                <td>publisherConfirms</td>
+                                <td>false</td>
+                                <td>Erzwingt eine Annahmebestätigung</td>
+                            </tr>
+						</tbody>
+					</table>
+                </section>
+                <section>
+                    <h3>Publish / Subscribe</h3>
+                        Sendet eine Nachricht an beliebig viele Empfänger<br/><br/>
+                        Wenn kein Empfänger definiert wurde, geht Nachricht verloren (keine Speicherung / Verarbeitung)<br /><br />
+                        Zieltypen der Bestellung müssen übereinstimmen <br /><br />
+                        Polymorphy ist möglich
+                    </ul>
+                </section>
+                <section>
+                     Subscribe
+                        <pre><code class="cs">
+ myBus.Subscribe&lt;MyClass&gt;("MySub", 
+        msg => DoSomething(msg));
+ myBus.SubscribeAsync&lt;MyClass&gt;("MySubAsync",
+        msg => DoSomethingAsync(msg));
+     </code>
+                    </pre>
+                    Publish
+                        <pre><code class="cs">
+var msg = new MyClass{};                            
+myBus.Publish(msg);
+myBus.PublishAsync(msg);
+     </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Topic Based Routing</h3>
+                       Sonderform des Publish / Subscribe<br/><br/>
+                       Neben dem Zieltyp muss auch das Thema (Topic) passen<br/><br/>
+                       Im Thema sind Platzhalter möglich
+                    
+                </section>
+                   <section>
+                     Subscribe
+                        <pre><code class="cs">
+ myBus.Subscribe&lt;MyClass&gt;("MyTopicSub", 
+        msg => DoSomething(msg), x => x.WithTopic("MyTopic"));
+     </code>
+                    </pre>
+                    Publish
+                        <pre><code class="cs">
+var msg = new MyClass{};                            
+myBus.Publish(msg, "MyTopic");
+     </code>
+                    </pre>
+                </section>
+                <section>
+                    <h3>Request / Response (RPC)</h3>
+                    Sendet eine Nachricht und erwartet eine Antwort<br /><br />
+                    Matching über Typen der Anfrage und der Antwort<br/><br />
+                    Exception, wenn Antwort nicht innerhalb Timeout 
+                </section>
+                <section>
+                    Response
+                        <pre><code class="cs">
+                          
+myBus.Respond&lt;MyClass1,MyClass2&gt;(DoSometingWithResult);
+myBus.RespondAsync&lt;MyClass1,MyClass2&gt;(DoSometingAsyncWithResult);
+                    </code></pre>
+                    Request
+                        <pre><code class="cs">
+var req = new MyClass1{};                            
+var result = myBus.Request&lt;MyClass1,MyClass2&gt;(req);
+var result = await myBus.RequestAsync&lt;MyClass1,MyClass2&gt;(req);
+                    </code></pre>
+                </section>  
+                <section>
+                    <h3>Send / Receive (Command Pipelines)</h3>
+                    Command Pipelines<br /><br />
+                    Queue enthält Nachrichten verschiedener Typen<br /> <br />
+                    Bestellung wird auf den Nachrichtentyp eingegrenzt<br /> <br />
+                    Nicht zustellbare Nachrichten werden in Error-Queue übertragen
+                </section>
+                 <section>
+                    Receive
+                        <pre><code class="cs">
+myBus.Receive("MyMessageQueue", x => x
+    .Add&lt;MyClassA&gt;(DoSomethingWithA)
+    .Add&lt;MyClassB&gt;(DoSomethingWithB);
+                    </code></pre>
+                    Request
+                        <pre><code class="cs">
+myBus.Send("MyMessageQueue", new MyClassA {});
+myBus.Send("MyMessageQueue", new MyClassB {});
+
+                    </code></pre>
+                </section>
+            </section>
 			<section>
 				<section>
                      <h2>Image-Workflow</h2>
