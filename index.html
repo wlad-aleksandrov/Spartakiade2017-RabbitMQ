@@ -174,11 +174,6 @@ namepace FP.MsRmq.Connecting
                                 <td>10</td>
                                 <td>timeout in Sekunden</td>
                             </tr>
-                            <tr>
-                                <td>publisherConfirms</td>
-                                <td>false</td>
-                                <td>Erzwingt eine Annahmebestätigung</td>
-                            </tr>
 						</tbody>
 					</table>
                 </section>
@@ -270,6 +265,104 @@ myBus.Send("MyMessageQueue", new MyClassB {});
                     </code></pre>
                 </section>
             </section>
+            <section>
+                <section>
+                    <h2>RabbitMQ im Cluster</h2>
+                    <img src="images/logo_rabbitmq.png" style="border:0px" alt="Logo of Rabbit MQ"/>
+                </section>
+                <section>
+                    <h3>Voraussetzungen</h3>
+                    Damit die verschienden Nodes verknüpft werden können, müssen sie das gleich ERLANG COOKIE besitzen.
+                </section>
+                <section>
+                    <h3>Beispiel mit Docker</h3>
+                    Hinweis: Sicherheit und eventuelle Firewallanpassung werden außer Acht gelassen.
+                </section>
+                <section>
+                    Netzwerk definieren
+                       <pre>
+                            <code data-trim contenteditable>
+$ docker network create rmqcluster
+                            </code>
+                        </pre>
+                      Start Node1 (Master)
+                     <pre>
+                            <code data-trim contenteditable>
+$ docker run -d --hostname rmqNode1 --name rmqNode1 --network=rmqcluster 
+    -p 5672:5672 -p 15672:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim'
+    rabbitmq:3-management
+                            </code>
+                        </pre>
+                    Start Node2 (Node mit Persistenz)
+                    <pre>
+                            <code data-trim contenteditable>
+$ docker run -d --hostname rmqNode2 --name rmqNode2 --network=rmqcluster 
+    -p 5673:5672 -p 15673:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' 
+    rabbitmq:3-management
+                            </code>
+                        </pre>
+                </section>
+                <section>
+                    Start Node3 (RAM Node)
+                    <pre>
+                            <code data-trim contenteditable>
+$ docker run -d --hostname rmqNode3 --name rmqNode3 --network=rmqcluster 
+    -p 5674:5672 -p 15674:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' 
+    rabbitmq:3-management
+                            </code>
+                        </pre>
+                    Container zur Konfiguration
+                     <pre>
+                        <code data-trim contenteditable>
+$ docker run -it --rm --network=rmqcluster 
+	-e RABBITMQ_ERLANG_COOKIE='strenggeheim' rabbitmq:3
+                            </code>
+                        </pre>
+                </section>
+                <section>
+                        Hinzufügen Node 2
+                        <pre>
+                        <code data-trim contenteditable>
+rabbitmqctl -n rabbit@rmqNode2 stop_app
+rabbitmqctl -n rabbit@rmqNode2 join_cluster rabbit@rmqNode1
+rabbitmqctl -n rabbit@rmqNode2 start_app
+                              </code>
+                        </pre>
+                        Hinzufügen Node 3
+                        <pre>
+                        <code data-trim contenteditable>
+rabbitmqctl -n rabbit@rmqNode3 stop_app
+rabbitmqctl -n rabbit@rmqNode3 join_cluster --ram rabbit@rmqNode1
+rabbitmqctl -n rabbit@rmqNode3 start_app
+                              </code>
+                        </pre>
+                </section>
+                <section>
+                    <h3>Aktivierung der Hochverfügbarkeit</h3>
+                    <a href="https://www.rabbitmq.com/ha.html" target="_blank">Info</a>
+                        <pre>
+                        <code data-trim contenteditable>
+                         rabbitmqctl -n rabbit@rmqNode1 set_policy ha-all "" '{"ha-mode":"all"}' 
+                              </code>
+                        </pre>
+                </section>
+            </section>
+            <section>
+                <section>
+                    <h2>EasyNetQ im Cluster</h2>
+                </section>
+                <section>
+                    
+                    <h3>Cluster mit TCP-Loadbalancer</h3>
+                    Loadbalancer entscheidet über Verteilung und ist für den Client transparent.
+                     <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=IP-LoadBalancer");</code></pre>
+                    <h3>Cluster mit re-try loop</h3>
+                    EasyNetQ versucht nach einem Verbindungsproblem den nächsten Host. Ist kein Host verfügbar, werden alle 5 Sekunde alle Host geprüft.
+                     <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=host1,host2,host3");</code></pre>
+                </section>
+            </section>
+            
+
 			<section>
 				<section>
                      <h2>Image-Workflow</h2>
