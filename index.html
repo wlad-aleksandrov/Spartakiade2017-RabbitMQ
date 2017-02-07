@@ -232,7 +232,6 @@ myBus.Publish(msg, "MyTopic");
                 <section>
                     Response
                         <pre><code class="cs">
-                          
 myBus.Respond&lt;MyClass1,MyClass2&gt;(DoSometingWithResult);
 myBus.RespondAsync&lt;MyClass1,MyClass2&gt;(DoSometingAsyncWithResult);
                     </code></pre>
@@ -360,9 +359,10 @@ rabbitmqctl -n rabbit@rmqNode3 start_app
                     EasyNetQ versucht nach einem Verbindungsproblem den nächsten Host. Ist kein Host verfügbar, werden alle 5 Sekunde alle Host geprüft.
                      <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=host1,host2,host3");</code></pre>
                 </section>
+                 <section>
+                TBD: Grafik Cluster-Beispiel
             </section>
-            
-
+            </section>
 			<section>
 				<section>
                      <h2>Image-Workflow</h2>
@@ -399,8 +399,101 @@ Set-ExecutionPolicy RemoteSigned
                         <li>Grafiken für den Benutzer speichern</li>
                     </ul>
                   </section>
-			</section>
+                  <section>
+                      TBD: Info für Docker-Images / Compose
 
+                  </section>
+			</section>
+            <section>
+                <section> <h2>TLS RabbitMQ mi SSL / TLS</h2>
+                    <img src="images/logo_rabbitmq.png" style="border:0px" alt="Logo of Rabbit MQ"/>
+                </section>
+                
+                <section>
+                    TBD: Übersicht Grafik
+                </section>
+                <section>
+                      Start Certstore
+                     <pre>
+                            <code data-trim contenteditable>$ docker run --name certstore 
+    fpommerening/spartakiade2017-rabbitmq:ssl-certstore</code>
+                     </pre>
+                     Starten CA 
+                     <pre>
+                            <code data-trim contenteditable>$ docker run -it --rm --volumes-from certstore 
+    fpommerening/spartakiade2017-rabbitmq:ssl-ca /bin/bash</code>
+                     </pre>
+                     Zertifikate erstellen
+                      <pre>
+                            <code data-trim contenteditable>cd /usr/local/bin/
+./ca.sh MyCA
+./server.sh rabbitServer strenggeheim
+./client.sh rabbitClient strenggeheim</code>
+                     </pre>
+                </section>
+                <section>
+                Start RabbitMQ mit SSL
+                    <pre>
+                            <code data-trim contenteditable>
+$ docker run -d --name rabbitssl --volumes-from certstore 
+    -p 15671:15671 -p 5671:5671 
+    -e RABBITMQ_SSL_CACERTFILE=/rabbitssl/ca/cacert.pem 
+    -e RABBITMQ_SSL_CERTFILE=/rabbitssl/server/cert.pem 
+    -e RABBITMQ_SSL_KEYFILE=/rabbitssl/server/key.pem 
+    rabbitmq:3-management
+                            </code>
+                     </pre>
+Client - Zertifikate kopieren
+                      <pre>
+                            <code data-trim contenteditable>
+$ docker cp certstore:/rabbitssl/client/keycert.p12 .
+                            </code>
+                     </pre>
+                </section>
+                <section>
+                   <h3> EasyNetQ mit SSL</h3>
+                    <pre><code class="cs">
+var connection = new ConnectionConfiguration();
+connection.Port = 5671;
+connection.UserName = "guest";
+connection.Password = "guest";
+connection.Product = "SSLTest;
+                 </code></pre>
+<pre><code class="cs">
+var host1 = new HostConfiguration();
+host1.Host = "localhost";
+host1.Port = 5671;
+host1.Ssl.Enabled = true;
+host1.Ssl.ServerName = "rabbitServer";
+host1.Ssl.CertPath = @"c:\Temp\keycert.p12";
+host1.Ssl.CertPassphrase = "strenggeheim";
+host1.Ssl.AcceptablePolicyErrors =
+     SslPolicyErrors.RemoteCertificateNameMismatch | 
+     SslPolicyErrors.RemoteCertificateChainErrors;
+connection.Hosts = new List< HostConfiguration> { host1 };
+connection.Validate();
+myBus = RabbitHutch.CreateBus(connection, services => { });
+                    </code></pre>
+
+                </section>
+            </section>
+            <section>
+                <h2> V-HOSTS Benutzer / Password</h2>
+            </section>
+            <section>
+                <h2> TBD: Zeitgesteuertes Queuing</h2>
+            </section>
+            <section>
+                <h2> TBD: Verknüpfung Node.js + EasyNETQ</h2>
+            </section>
+            <section>
+                <section>
+                    <h2>Weiterführende Informationen</h2>
+                </section>
+                <section>
+                    https://weblogs.asp.net/jeffreyabecker/Using-SSL-client-certificates-for-authentication-with-RabbitMQ
+                </section>
+            </section>
 			</div>
 		</div>
 
