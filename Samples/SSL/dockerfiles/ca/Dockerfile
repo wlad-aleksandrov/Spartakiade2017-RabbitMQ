@@ -6,9 +6,5 @@ RUN set -x \
 	&& apt-get update && apt-get install -y --no-install-recommends openssl && rm -rf /var/lib/apt/lists/* \
 	&& apt-get purge -y --auto-remove
 
-COPY openssl.cnf /rabbitssl/ca/
-COPY docker-entrypoint.sh /usr/local/bin/
-
-VOLUME ["/rabbitssl"]
-
-ENTRYPOINT ["docker-entrypoint.sh"]
+COPY openssl.cnf /usr/local/bin/
+COPY *.sh /usr/local/bin/
