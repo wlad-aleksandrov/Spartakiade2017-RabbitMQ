@@ -1,5 +1,5 @@
 
-$zip = 'c:\Program Files\7-Zip"\7z'
+$zip = "c:\Program Files\7-Zip\7z.exe"
 $projectPath = 'C:\Projects\Spartakiade2017-RabbitMQ\Samples\PicFlow'
 $tempPath = 'c:\temp\spartakiade'
 
@@ -14,13 +14,9 @@ $projects = @{
 
 $projects.GetEnumerator() |
      ForEach-Object {
-        Set-Location ('"{0}\src\{1}"' -f $projectPath, $_.Key) 
-        & dotnet 'publish' ('-c Release -o {0}\{1}'-f $tempPath, $_.Value)
-        Set-Location $tempPath
-        & $zip a ('{0}.7z' -f  $_.Value)  (' {0}\{1}' -f $tempPath, $_.Value)
-        Set-Location ('"{0}\dockerfiles\{1}"' -f $projectPath, $_) 
-        Copy-Item (' {0}\{1}.7z' -f $tempPath, $_.Value) 
-        & docker 'build' ('-t fpommerening/spartakiade2017-rabbitmq:{0} . ' -f $_.Value)
+        & dotnet 'publish' ('"{0}\src\{1}"' -f $projectPath, $_.Key)-c Release -o('"{0}\{1}"'-f  $tempPath, $_.Value)
+        & $zip a ("{0}\dockerfiles\{1}\app\{1}.7z" -f $projectPath, $_.Value)  ("{0}\{1}" -f $tempPath, $_.Value)
+        & docker build -t ("fpommerening/spartakiade2017-rabbitmq:{0}" -f $_.Value) ("{0}\dockerfiles\{1}\" -f $projectPath, $_.Value)
     }
 
 
