@@ -29,8 +29,8 @@ namespace FP.Spartakiade2017.PicFlow.WebApp
         {
             var bus = RabbitHutch.CreateBus(EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ", "host=localhost"));
             container.Register<IBus>(bus);
-            container.Register(new ImageRepository(EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB", 
-                "host=localhost;database=devspace;password=leipzig;username=devspace")));
+            container.Register(new ImageRepository(EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
+                "host=localhost;database=spartakiade;password=sportfrei;username=spartakiade")));
             var authenticationRepository = new AuthenticationRepository(bus);
             container.Register<AuthenticationRepository>(authenticationRepository);
             container.Register<IFileHandler, MongoDbFileHandler>(new MongoDbFileHandler(EnvironmentVariable.GetValueOrDefault("ConnectionStringDocumentDB", "mongodb://localhost")));
