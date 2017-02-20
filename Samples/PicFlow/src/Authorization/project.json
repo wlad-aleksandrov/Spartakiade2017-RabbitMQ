@@ -9,8 +9,8 @@
       "type": "platform",
       "version": "1.1.0"
     },
-    "Marten": "1.1.0",
-    "EasyNetQ": "2.0.2-netcore0001",
+    "Marten": "1.4.0",
+    "EasyNetQ": "2.0.4-netcore1438",
     "Contracts": "1.0.0-*"
   },
 

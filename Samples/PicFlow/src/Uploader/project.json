@@ -9,9 +9,9 @@
       "type": "platform",
       "version": "1.1.0"
     },
-    "EasyNetQ": "2.0.2-netcore0001",
-    "MongoDB.Driver": "2.3.0",
-    "Contracts": "1.0.0-*"
+    "Contracts": "1.0.0-*",
+    "EasyNetQ": "2.0.4-netcore1438",
+    "MongoDB.Driver": "2.4.2"
   },
 
   "frameworks": {

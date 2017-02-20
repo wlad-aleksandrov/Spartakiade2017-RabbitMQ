@@ -4,11 +4,14 @@
     "emitEntryPoint": true,
     "copyToOutput": { "include": "Overlays" }
   },
+  "publishOptions": {
+    "include": [ "Overlays" ]
+  },
 
   "dependencies": {
     "Contracts": "1.0.0-*",
-    "EasyNetQ": "2.0.2-netcore0001",
-    "ImageProcessorCore": "1.0.0-alpha1058",
+    "EasyNetQ": "2.0.4-netcore1438",
+    "ImageProcessorCore": "1.0.0-alpha1095",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.1.0"
