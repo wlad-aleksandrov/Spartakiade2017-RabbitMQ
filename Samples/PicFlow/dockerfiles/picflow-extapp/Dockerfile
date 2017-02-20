@@ -1,7 +1,7 @@
 FROM fpommerening/spartakiade2017-rabbitmq:core-base
 MAINTAINER Frank Pommerening "frank@pommerening-online.de"
-ENV REFRESHED_AT 2017-01-31
-ENV Picflow_VERSION 0.0.1
+ENV REFRESHED_AT 2017-02-20
+ENV Picflow_VERSION 0.0.2
 
  RUN set -x \
     && wget -O /home/picflow-extapp.7z "https://github.com/fpommerening/Spartakiade2017-RabbitMQ/releases/download/$Picflow_VERSION/picflow-extapp.7z" \
