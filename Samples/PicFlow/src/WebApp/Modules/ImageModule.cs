@@ -10,7 +10,7 @@ namespace FP.Spartakiade2017.PicFlow.WebApp.Modules
     public class ImageModule : NancyModule
     {
 
-        public ImageModule(IFileHandler fileUploadHandler, MessageRepository messageRepo, ImageRepository imageRepo)
+        public ImageModule(IFileHandler fileUploadHandler, MessageRepository messageRepo, ImageRepository imageRepo, AuthenticationRepository authRepo)
         {
 
             Get("/imagerequest", args =>
@@ -32,7 +32,14 @@ namespace FP.Spartakiade2017.PicFlow.WebApp.Modules
 
                 var uploadResult = await fileUploadHandler.HandleUpload(request.File.Name, request.File.Value);
                 var identity = this.Context.CurrentUser;
-                var userCookie = Request.Cookies.ContainsKey("picflow_webapp_username") ? Request.Cookies["picflow_webapp_username"] : string.Empty;
+                if (identity == null)
+                {
+                    return HttpStatusCode.Unauthorized;
+                }
+
+                var userId = Guid.Parse(identity.Identity.Name);
+                var user = authRepo.GetAuthUserByUserId(userId);
+                
 
                 if (request.PostImage)
                 {
@@ -44,7 +51,7 @@ namespace FP.Spartakiade2017.PicFlow.WebApp.Modules
                     };
                     var uploadJob = new ImageUploadJob
                     {
-                        User = userCookie,
+                        User = user.User,
                         Message = request.Message
                     };
                     procJob.Successors.Add(uploadJob);
@@ -61,7 +68,7 @@ namespace FP.Spartakiade2017.PicFlow.WebApp.Modules
                     };
                     var saveJob = new ImageSaveJob
                     {
-                        UserId = Guid.Parse(identity.Identity.Name),
+                        UserId = userId,
                         Message = request.Message,
                         SourceId = uploadResult.Identifier,
                         Resolution = resolution

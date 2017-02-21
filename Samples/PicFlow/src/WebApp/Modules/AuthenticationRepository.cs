@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Concurrent;
+using System.Linq;
 using System.Threading.Tasks;
 using EasyNetQ;
 using FP.Spartakiade2017.PicFlow.Contracts.Messages;
@@ -50,6 +51,11 @@ namespace FP.Spartakiade2017.PicFlow.WebApp.Modules
             if (!userSessions.ContainsKey(sessionId))
                 return null;
             return userSessions[sessionId];
+        }
+
+        public AuthUser GetAuthUserByUserId(Guid userId)
+        {
+            return userSessions.Values.FirstOrDefault(x => x.Id == userId);
         }
 
         public void DeleteSession(Guid sessionId)

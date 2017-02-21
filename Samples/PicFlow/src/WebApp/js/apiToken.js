@@ -1,24 +1,20 @@
 ﻿var apiKeyKey = "picflow_webapp_apiKey";
-var usernameKey = "picflow_webapp_username";
 
 var ApiToken = {
 
     Set: function (username, apiKey, rememberMe) {
         var days = rememberMe ? 10 : 0;
         createCookie(apiKeyKey, apiKey, days);
-        createCookie(usernameKey, username, days);
     },
 
     Get: function () {
         var key = readCookie(apiKeyKey);
-        var username = readCookie(usernameKey);
-        var token = { Key: key, Username: username, IsValid: key != null };
+        var token = { Key: key, IsValid: key != null };
         return token;
     },
 
     Delete: function () {
         eraseCookie(apiKeyKey);
-        eraseCookie(usernameKey);
     }
 };
 
