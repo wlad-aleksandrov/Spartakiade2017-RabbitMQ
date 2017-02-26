@@ -1,0 +1,46 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "SchedulerService", "SchedulerService\SchedulerService.xproj", "{A16CB1DD-BCF5-4336-9A38-B3546E894B01}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Recipient", "Recipient\Recipient.xproj", "{B00AF4D0-E0CB-46A8-BC1A-0D4BCBC62593}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Sender", "Sender\Sender.xproj", "{E2F791CB-334E-4497-9C8C-78C955695DB7}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Contracts", "Contracts\Contracts.xproj", "{0A60D297-35B5-4402-85CA-2F69B24DEEC6}"
+EndProject
+Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MongoScheduler", "MongoScheduler\MongoScheduler.xproj", "{FF7FC296-D687-4BA3-ABBC-EB553FF8586F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A16CB1DD-BCF5-4336-9A38-B3546E894B01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A16CB1DD-BCF5-4336-9A38-B3546E894B01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A16CB1DD-BCF5-4336-9A38-B3546E894B01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A16CB1DD-BCF5-4336-9A38-B3546E894B01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B00AF4D0-E0CB-46A8-BC1A-0D4BCBC62593}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B00AF4D0-E0CB-46A8-BC1A-0D4BCBC62593}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B00AF4D0-E0CB-46A8-BC1A-0D4BCBC62593}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B00AF4D0-E0CB-46A8-BC1A-0D4BCBC62593}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E2F791CB-334E-4497-9C8C-78C955695DB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E2F791CB-334E-4497-9C8C-78C955695DB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E2F791CB-334E-4497-9C8C-78C955695DB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E2F791CB-334E-4497-9C8C-78C955695DB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A60D297-35B5-4402-85CA-2F69B24DEEC6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A60D297-35B5-4402-85CA-2F69B24DEEC6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A60D297-35B5-4402-85CA-2F69B24DEEC6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A60D297-35B5-4402-85CA-2F69B24DEEC6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FF7FC296-D687-4BA3-ABBC-EB553FF8586F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FF7FC296-D687-4BA3-ABBC-EB553FF8586F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FF7FC296-D687-4BA3-ABBC-EB553FF8586F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FF7FC296-D687-4BA3-ABBC-EB553FF8586F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
