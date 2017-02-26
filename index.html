@@ -315,6 +315,7 @@ $ docker run -d --hostname rmqNode3 --name rmqNode3 --network=rmqcluster
                         <code data-trim contenteditable>
 $ docker run -it --rm --network=rmqcluster 
 	-e RABBITMQ_ERLANG_COOKIE='strenggeheim' rabbitmq:3
+    /bin/bash
                             </code>
                         </pre>
                 </section>
@@ -406,7 +407,7 @@ Set-ExecutionPolicy RemoteSigned
                   </section>
 			</section>
             <section>
-                <section> <h2>TLS RabbitMQ mi SSL / TLS</h2>
+                <section> <h2>TLS RabbitMQ mit SSL / TLS</h2>
                     <img src="images/logo_rabbitmq.png" style="border:0px" alt="Logo of Rabbit MQ"/>
                 </section>
                 <section>
@@ -478,10 +479,61 @@ myBus = RabbitHutch.CreateBus(connection, services => { });
                 </section>
             </section>
             <section>
+                <section>
                 <h2> V-HOSTS Benutzer / Password</h2>
+                </section>
+                <section>
+                    TBD: Screenshot Management
+                </section>
+                <section>
+                   Verbindung mit V-Host und / oder alternativem Benutzer erfolgt per Connectionstring.
+                    <br />
+                   <br />
+                   V-Host
+                   <br />
+                    <pre><code class="cs">
+var myBus = RabbitHutch.CreateBus(
+    "host=localhost;virtualHost=myHost");
+                    </code></pre>
+                     <br />
+                    Benutzer / Passwort
+                    <br />
+                         <pre><code class="cs">
+var myBus = RabbitHutch.CreateBus(
+    "host=localhost;username=myUser;password=myPasswort");
+                    </code></pre>
+                </section>
+                <section>
+                    TBD: Übersichtsgrafik V-Host
+                </section>
             </section>
             <section>
-                <h2> TBD: Zeitgesteuertes Queuing</h2>
+                <section>
+                    <h2>Zeitgesteuertes Queuing</h2>
+                </section>
+                <section>
+                    TBD: EasyNetQ IScheduler
+                </section>
+
+                <section>
+                    RabbitMQ Delayed Message Plugin<br/>
+                    <a href="https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/" target="_blank">GitHub</a>
+                    <br />
+                    Starten Docker-Image mit Plugin
+                    <br />
+                      <pre>
+                            <code data-trim contenteditable>
+$ docker run -d --hostname rmqDelayEx --name rmqDelayEx
+    -p 5672:5672 -p 15672:15672
+    fpommerening/spartakiade2017-rabbitmq:rabbitmq-delaymxmgm
+                            </code>
+                        </pre>
+                    Die IScheduler-Implementierung DelayedExchangeScheduler wird von EasyNetQ mitgeliefert.
+                    Delayed Message Plugin unterstützt kein Abbruch (Cancelling) von Nachrichten -> NotImplementedException!
+                </section>
+                <section>
+                    TBD: Übersichtsgrafik Mongo
+                </section>
             </section>
             <section>
                 <h2> TBD: Verknüpfung Node.js + EasyNETQ</h2>
