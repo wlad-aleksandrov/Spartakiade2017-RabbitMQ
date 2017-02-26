@@ -2,6 +2,9 @@ version: '2'
 services: 
   rabbitmq:
     image: rabbitmq:3-management
+    
+  delaymxmgm:
+    image: fpommerening/spartakiade2017-rabbitmq:rabbitmq-delaymxmgm
 
   mongo:
     image: mongo:3.2
@@ -14,6 +17,7 @@ services:
     
   web:
     depends_on:
+      - delaymxmgm
       - rabbitmq
       - mongo
       - imagedb
