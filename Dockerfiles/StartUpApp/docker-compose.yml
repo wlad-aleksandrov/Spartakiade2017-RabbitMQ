@@ -8,11 +8,15 @@ services:
   
   core:
     image: fpommerening/spartakiade2017-rabbitmq:core-base
+
+  imagedb:
+    image: fpommerening/spartakiade2017-rabbitmq:picflow-database
     
   web:
     depends_on:
       - rabbitmq
       - mongo
+      - imagedb
     image: fpommerening/spartakiade2017-rabbitmq:StartupApp
     ports:
       - 18317:18317
