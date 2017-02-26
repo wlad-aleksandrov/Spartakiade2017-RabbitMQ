@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "exports": {
+    "Contracts/1.0.0": {
+      "type": "project",
+      "framework": ".NETStandard,Version=v1.0",
+      "compile": {
+        "bin/Debug/FP.Spartakiade2017.IoTApp.Contracts.dll": {}
+      },
+      "runtime": {
+        "bin/Debug/FP.Spartakiade2017.IoTApp.Contracts.dll": {}
+      },
+      "contentFiles": {
+        "bin/Debug/FP.Spartakiade2017.IoTApp.Contracts.pdb": {
+          "buildAction": "None",
+          "codeLanguage": "any",
+          "copyToOutput": true
+        }
+      }
+    }
+  }
+}
