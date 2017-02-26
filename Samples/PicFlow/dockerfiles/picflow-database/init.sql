@@ -14,22 +14,22 @@ COMMENT ON TABLE "mt_doc_user"
     IS 'origin:Marten.IDocumentStore, Marten, Version=1.1.0.762, Culture=neutral, PublicKeyToken=null';
 
 INSERT INTO "mt_doc_user"(id, data, mt_last_modified, mt_version, mt_dotnet_type)
-	values ('3e149ba6-6e45-4057-8c9e-17be9f426438',
-'{"UserName": "jmeier", "LastName": "Meier", "PasswordHash": "N498m/Iyc0V6fejJgGQ4NcXkCAk=", "Id": "3e149ba6-6e45-4057-8c9e-17be9f426334", "FirstName": "Jürgen"}',
- '2016-10-10 19:39:16.424395+00', '3e149ba6-a945-4e98-93b6-213e746bf64f', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
+	values ('c092e847-1a7d-44aa-8f2c-1cf14bc09f6c',
+'{"UserName": "jmeier", "LastName": "Meier", "PasswordHash": "iraooM8GnjeDxvWRY60DoFExBVY=", "Id": "c092e847-1a7d-44aa-8f2c-1cf14bc09f6c", "FirstName": "Jürgen"}',
+ '2017-02-22 01:16:53.469985+00', '540d26a7-da43-4dcf-9ef7-f3d3c95120e1', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
 	
 INSERT INTO "mt_doc_user"(id, data, mt_last_modified, mt_version, mt_dotnet_type)
-	values ('47149ba6-1b42-4a27-8e8d-6ea09e88d43f',
-'{"UserName": "wkaufmann", "LastName": "Kaufmann", "PasswordHash": "N498m/Iyc0V6fejJgGQ4NcXkCAk=", "Id" : "47149ba6-1b42-4a27-8e8d-6ea09e88d43f", "FirstName": "Wolfgang"}',
- '2016-10-10 19:41:16.480185+00', '47149ba6-5a42-4eab-b96a-76de6cac7c3a', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
+	values ('cf7cce87-8733-45b3-b64b-b311c796ddbf',
+'{"UserName": "wkaufmann", "LastName": "Kaufmann", "PasswordHash": "iraooM8GnjeDxvWRY60DoFExBVY=", "Id" : "47149ba6-1b42-4a27-8e8d-6ea09e88d43f", "FirstName": "Wolfgang"}',
+ '2017-02-22 01:17:32.299342+00', '570d26a7-5b41-4fe9-807c-fdbb3c028dbe', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
 
 INSERT INTO "mt_doc_user"(id, data, mt_last_modified, mt_version, mt_dotnet_type)
-	values ('4c149ba6-974e-4996-8fe3-c0a849f53e09',
-'{"UserName": "smueller", "LastName": "Müller", "PasswordHash": "N498m/Iyc0V6fejJgGQ4NcXkCAk=", "Id" : "4c149ba6-974e-4996-8fe3-c0a849f53e09", "FirstName": "Sabine"}',
- '2016-10-10 19:42:35.391597+00', '4c149ba6-d34e-430d-9b2a-4d7703e5208d', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
+	values ('8862e424-0ea2-4e95-9038-a609201d566e',
+'{"UserName": "smueller", "LastName": "Müller", "PasswordHash": "iraooM8GnjeDxvWRY60DoFExBVY=", "Id" : "4c149ba6-974e-4996-8fe3-c0a849f53e09", "FirstName": "Sabine"}',
+ '2017-02-22 01:19:08.236635+00', '5e0d26a7-c941-4ed1-853d-b98f8ac7e9eb', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
  
  INSERT INTO "mt_doc_user"(id, data, mt_last_modified, mt_version, mt_dotnet_type)
-	values ('4f149ba6-a147-4191-ae23-f67614dd50b1',
-'{"UserName": "klehmann", "LastName": "Lehmann", "PasswordHash": "N498m/Iyc0V6fejJgGQ4NcXkCAk=", "Id" : "4f149ba6-a147-4191-ae23-f67614dd50b1", "FirstName": "Kevin"}',
- '2016-10-10 19:43:10.415857+00', '4f149ba6-df47-477a-9719-30e0aab49b81', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
+	values ('62f6e268-7449-4d95-8510-e8894a855acf',
+'{"UserName": "klehmann", "LastName": "Lehmann", "PasswordHash": "iraooM8GnjeDxvWRY60DoFExBVY=", "Id" : "4f149ba6-a147-4191-ae23-f67614dd50b1", "FirstName": "Kevin"}',
+ '2017-02-22 01:19:52.800921+00', '610d26a7-0246-489c-b30f-b842ec6c6ca7', 'FP.Spartakiade2017.PicFlow.Contracts.Dbo.User');
 	
