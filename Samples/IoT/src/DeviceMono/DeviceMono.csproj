@@ -7,8 +7,8 @@
     <ProjectGuid>{484483E2-14FA-4A86-A7D6-80C325FE10F3}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FP.Spartakiade2017.IoTApp.Device</RootNamespace>
-    <AssemblyName>FP.Spartakiade2017.IoTApp.DeviceMono</AssemblyName>
+    <RootNamespace>FP.Spartakiade2017.MsRmq.IoTApp.Device</RootNamespace>
+    <AssemblyName>FP.Spartakiade2017.MsRmq.IoTApp.DeviceMono</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

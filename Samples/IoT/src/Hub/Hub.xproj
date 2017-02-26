@@ -7,7 +7,7 @@
   <Import Project="$(VSToolsPath)\DotNet\Microsoft.DotNet.Props" Condition="'$(VSToolsPath)' != ''" />
   <PropertyGroup Label="Globals">
     <ProjectGuid>d96596d1-6c35-4cf8-a146-a50ceab1870d</ProjectGuid>
-    <RootNamespace>FP.Spartakiade2017.IoTApp.Hub</RootNamespace>
+    <RootNamespace>FP.Spartakiade2017.MsRmq.IoTApp.Hub</RootNamespace>
     <BaseIntermediateOutputPath Condition="'$(BaseIntermediateOutputPath)'=='' ">.\obj</BaseIntermediateOutputPath>
     <OutputPath Condition="'$(OutputPath)'=='' ">.\bin\</OutputPath>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>

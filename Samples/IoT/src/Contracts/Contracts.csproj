@@ -8,8 +8,8 @@
     <ProjectGuid>{E584F0EF-BA42-457C-A1D9-069993321DD8}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>FP.Spartakiade2017.IoTApp.Contracts</RootNamespace>
-    <AssemblyName>FP.Spartakiade2017.IoTApp.Contracts</AssemblyName>
+    <RootNamespace>FP.Spartakiade2017.MsRmq.IoTApp.Contracts</RootNamespace>
+    <AssemblyName>FP.Spartakiade2017.MsRmq.IoTApp.Contracts</AssemblyName>
     <DefaultLanguage>en-US</DefaultLanguage>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{786C830F-07A1-408B-BD7F-6EE04809D6DB};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>

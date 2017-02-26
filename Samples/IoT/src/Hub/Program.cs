@@ -1,4 +1,4 @@
-﻿namespace FP.Spartakiade2017.IoTApp.Hub
+﻿namespace FP.Spartakiade2017.MsRmq.IoTApp.Hub
 {
     public class Program
     {

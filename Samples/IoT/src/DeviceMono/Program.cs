@@ -1,4 +1,4 @@
-﻿namespace FP.Spartakiade2017.IoTApp.Device
+﻿namespace FP.Spartakiade2017.MsRmq.IoTApp.Device
 {
     class Program
     {
