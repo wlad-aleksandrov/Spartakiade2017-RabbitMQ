@@ -15,6 +15,9 @@ services:
   imagedb:
     image: fpommerening/spartakiade2017-rabbitmq:picflow-database
     
+  certstore:
+    image: fpommerening/spartakiade2017-rabbitmq:ssl-certstore
+    
   web:
     depends_on:
       - delaymxmgm
