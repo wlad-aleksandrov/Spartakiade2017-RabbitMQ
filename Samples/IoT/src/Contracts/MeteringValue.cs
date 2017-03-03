@@ -1,7 +1,15 @@
-﻿namespace FP.Spartakiade2017.MsRmq.IoTApp.Contracts
+﻿using System;
+
+namespace FP.Spartakiade2017.MsRmq.IoTApp.Contracts
 {
     public class MeteringValue
     {
-        public string Hallo { get; set; }
+        public decimal Value { get; set; }
+
+        public string ObisCode { get; set; }
+
+        public DateTime Timestamp { get; set; }
+
+        public string Host { get; set; }
     }
 }
