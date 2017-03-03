@@ -5,11 +5,13 @@
   },
 
   "dependencies": {
+    "Contracts": "1.0.0-*",
     "EasyNetQ": "2.0.4-netcore1438",
     "Microsoft.NETCore.App": {
       "type": "platform",
       "version": "1.0.1"
-    }
+    },
+    "MongoScheduler": "1.0.0-*"
   },
 
   "frameworks": {

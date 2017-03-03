@@ -1,61 +1,72 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Threading.Tasks;
+using EasyNetQ;
+using EasyNetQ.FluentConfiguration;
 using EasyNetQ.Scheduling;
 
 namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
 {
     public class MongoScheduler : IScheduler
     {
-        public Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string cancellationKey = null) where T : class
+        private readonly MessageRepository _messageRepository;
+        public MongoScheduler(MessageRepository messageRepository)
         {
-            throw new NotImplementedException();
+            _messageRepository = messageRepository;
         }
 
-        public Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
+        public Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            return FuturePublishAsync(futurePublishDate, message, string.Empty, cancellationKey);
+        }
+
+        public async Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
+        {
+            var id = await _messageRepository.SaveFutureMessage<T>(message, futurePublishDate, topic, cancellationKey);
+            await AnnounceAction(id);
         }
 
         public void FuturePublish<T>(DateTime futurePublishDate, T message, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            FuturePublishAsync(futurePublishDate, message, cancellationKey).Wait();
         }
 
         public void FuturePublish<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            FuturePublishAsync(futurePublishDate, message, topic, cancellationKey).Wait();
         }
 
         public Task FuturePublishAsync<T>(TimeSpan messageDelay, T message, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            var futurePublishDate = DateTime.UtcNow.Add(messageDelay);
+            return FuturePublishAsync(futurePublishDate, message, cancellationKey);
         }
 
         public Task FuturePublishAsync<T>(TimeSpan messageDelay, T message, string topic, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            var futurePublishDate = DateTime.UtcNow.Add(messageDelay);
+            return FuturePublishAsync(futurePublishDate, message, topic, cancellationKey);
         }
 
         public void FuturePublish<T>(TimeSpan messageDelay, T message, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            FuturePublishAsync(messageDelay, message, cancellationKey).Wait();
         }
 
         public void FuturePublish<T>(TimeSpan messageDelay, T message, string topic, string cancellationKey = null) where T : class
         {
-            throw new NotImplementedException();
+            FuturePublishAsync(messageDelay, message, topic, cancellationKey).Wait();
         }
 
         public Task CancelFuturePublishAsync(string cancellationKey)
         {
-            throw new NotImplementedException();
+            return _messageRepository.CancelMessage(cancellationKey);
         }
 
         public void CancelFuturePublish(string cancellationKey)
         {
-            throw new NotImplementedException();
+            _messageRepository.CancelMessage(cancellationKey).Wait();
         }
+
+        public Func<string, Task> AnnounceAction { private get; set; }
     }
 }
