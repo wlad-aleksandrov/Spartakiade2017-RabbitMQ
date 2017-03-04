@@ -5,7 +5,7 @@ services:
     
   delaymxmgm:
     image: fpommerening/spartakiade2017-rabbitmq:rabbitmq-delaymxmgm
-
+    
   mongo:
     image: mongo:3.2
   
@@ -18,12 +18,16 @@ services:
   certstore:
     image: fpommerening/spartakiade2017-rabbitmq:ssl-certstore
     
+  ca:
+    image: fpommerening/spartakiade2017-rabbitmq:ssl-ca
+    
   web:
     depends_on:
       - delaymxmgm
       - rabbitmq
       - mongo
       - imagedb
+      - ca
     image: fpommerening/spartakiade2017-rabbitmq:StartupApp
     ports:
       - 18317:18317
