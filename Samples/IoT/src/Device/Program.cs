@@ -10,10 +10,9 @@ namespace FP.Spartakiade2017.MsRmq.IoTApp.Device
     {
         public static void Main(string[] args)
         {
-            
-
             IBus myBus = null;
 
+            Console.WriteLine("IoT Device is starting");
             try
             {
                 var connection = new ConnectionConfiguration
@@ -37,8 +36,9 @@ namespace FP.Spartakiade2017.MsRmq.IoTApp.Device
                 connection.Hosts = new List<HostConfiguration> {hostConfiguration};
                 connection.Validate();
                 myBus = RabbitHutch.CreateBus(connection, services => { });
+                //myBus = RabbitHutch.CreateBus("host=10.0.1.72");
 
-                Console.WriteLine("IoT Device is started");
+                
 
                 Console.WriteLine("Please enter the count of metering values:");
                 var countAsString = Console.ReadLine();
@@ -57,7 +57,6 @@ namespace FP.Spartakiade2017.MsRmq.IoTApp.Device
                         Host = System.Net.Dns.GetHostName()
                     };
                     myBus.Publish(mv);
-                    System.Threading.Thread.Sleep(1000);
                 }
             }
             catch (Exception e)
@@ -68,6 +67,7 @@ namespace FP.Spartakiade2017.MsRmq.IoTApp.Device
             {
                 myBus?.Dispose();
             }
+            Console.ReadLine();
 
         }
     }

@@ -35,6 +35,7 @@ namespace FP.Spartakiade2017.MsRmq.IoTApp.Hub
                 connection.Hosts = new List<HostConfiguration> {hostConfiguration};
                 connection.Validate();
                 myBus = RabbitHutch.CreateBus(connection, services => { });
+                //myBus = RabbitHutch.CreateBus("host=10.0.1.72");
 
                 Console.WriteLine("IoT Hub is started");
 
@@ -42,6 +43,7 @@ namespace FP.Spartakiade2017.MsRmq.IoTApp.Hub
                 {
                     Console.WriteLine($"New metering value from {mv.Host} - {mv.ObisCode} - {mv.Value} W");
                 });
+                Console.ReadLine();
             }
             catch (Exception e)
             {

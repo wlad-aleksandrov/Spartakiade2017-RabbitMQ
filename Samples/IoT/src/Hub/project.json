@@ -5,6 +5,7 @@
   },
 
   "dependencies": {
+    "Contracts": "1.0.0-*",
     "EasyNetQ": "2.0.4-netcore1438",
     "Microsoft.NETCore.App": {
       "type": "platform",
@@ -15,9 +16,6 @@
   "frameworks": {
     "netcoreapp1.0": {
       "dependencies": {
-        "Contracts": {
-          "target": "project"
-        }
 
       },
       "imports": "dnxcore50"
