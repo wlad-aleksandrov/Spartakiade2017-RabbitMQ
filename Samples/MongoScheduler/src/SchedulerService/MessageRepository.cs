@@ -1,4 +1,10 @@
-﻿namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
+﻿using System;
+using System.Collections.Generic;
+using System.Threading.Tasks;
+using MongoDB.Bson;
+using MongoDB.Driver;
+
+namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
 {
     public class MessageRepository
     {
@@ -9,18 +15,13 @@
             _mongoConnectionString = mongoConnectionString;
         }
 
-        public async Task<string> SaveFutureMessage<T>(T sourceMessage, DateTime executeDatetimeUtc, string topic,
+        public async Task<string> SaveFutureMessage<T>(T sourceMessage, DateTime createTimestampUtc, DateTime executeDatetimeUtc, string topic,
             string cancellationKey)
         {
-            if (string.IsNullOrEmpty(cancellationKey))
-            {
-                cancellationKey = Guid.NewGuid().ToString("N");
-            }
-
             var mongoMessage = new MongoFutureMessage
             {
                 CancellationKey = cancellationKey,
-                CreateTimestampUtc = DateTime.UtcNow,
+                CreateTimestampUtc = createTimestampUtc,
                 Type = typeof(T).AssemblyQualifiedName,
                 Content = sourceMessage,
                 ExecuteTimestampUtc = executeDatetimeUtc.ToUniversalTime(),
@@ -34,10 +35,10 @@
             return mongoMessage.Id.ToString();
         }
 
-        public async Task<MongoFutureMessage> GetFutureMessageById(string id)
+        public MongoFutureMessage GetFutureMessageById(string id)
         {
             var collection = GetMongoDatabase().GetCollection<MongoFutureMessage>("Messages");
-            return await collection.Find(x => x.Id == new ObjectId(id)).FirstOrDefaultAsync();
+            return collection.Find(x => x.Id == new ObjectId(id)).FirstOrDefault();
         }
 
         public async Task CancelMessage(string cancellationKey)
@@ -53,6 +54,18 @@
             return client.GetDatabase("RabbitMQ");
         }
 
+        public void UpdateState(string id, MongoFutureMessageState state)
+        {
+            var collection = GetMongoDatabase().GetCollection<MongoFutureMessage>("Messages");
+            collection.FindOneAndUpdate(x => x.Id == new ObjectId(id),
+                Builders<MongoFutureMessage>.Update.Set("state", state));
+        }
+
+        public IEnumerable<MongoFutureMessage> GetActiveMessages()
+        {
+            var collection = GetMongoDatabase().GetCollection<MongoFutureMessage>("Messages");
+            return collection.FindSync(x => x.State == MongoFutureMessageState.New).Current;
+        }
     }
 
 }

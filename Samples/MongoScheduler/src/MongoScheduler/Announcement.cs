@@ -8,6 +8,8 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
 
         public DateTime ExecuteTimestampUtc { get; set; }
 
+        public DateTime CreateTimestampUtc { get; set; }
+
         public string Topic { get; set; }
 
         public string CancellationKey { get; set; }
