@@ -1,7 +1,6 @@
 ﻿using System;
 using EasyNetQ;
 using EasyNetQ.Scheduling;
-using FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler;
 
 namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
 {
@@ -15,7 +14,13 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
                 var messageRepository = new MessageRepository("mongodb://localhost");
                 myBus = RabbitHutch.CreateBus("host=localhost");
 
-                
+
+                myBus.Subscribe<Announcement>("MongoScheduler", msg =>
+                {
+                    System.Console.WriteLine(msg);
+                });
+
+                Console.ReadLine();
             }
             catch (Exception ex)
             {

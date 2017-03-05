@@ -1,8 +1,4 @@
-﻿using System;
-using MongoDB.Bson;
-using MongoDB.Bson.Serialization.Attributes;
-
-namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
+﻿namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
 {
     public class MongoFutureMessage
     {

@@ -14,10 +14,8 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Sender
             IBus myBus = null;
             try
             {
-                var messageRepository = new MessageRepository("mongodb://localhost");
-                var mongoScheduler = new MongoScheduler.MongoScheduler(messageRepository);
-                myBus = RabbitHutch.CreateBus("host=localhost", register => register.Register<IScheduler>(provider => mongoScheduler));
-                mongoScheduler.AnnounceAction = id => myBus.PublishAsync(new Announcement {Id = id});
+                myBus = RabbitHutch.CreateBus("host=localhost",
+                   register => register.Register<IScheduler, MongoScheduler.MongoScheduler>());
 
                 StartSubscription(myBus);
                 ScheduleMessage(myBus);

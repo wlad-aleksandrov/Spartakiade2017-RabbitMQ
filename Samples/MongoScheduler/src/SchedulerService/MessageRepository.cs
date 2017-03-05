@@ -1,13 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Linq.Expressions;
-using System.Runtime.CompilerServices;
-using System.Threading.Tasks;
-using MongoDB.Bson;
-using MongoDB.Driver;
-
-namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
+﻿namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
 {
     public class MessageRepository
     {

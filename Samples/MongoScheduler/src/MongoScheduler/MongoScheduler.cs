@@ -1,17 +1,17 @@
 ﻿using System;
 using System.Threading.Tasks;
 using EasyNetQ;
-using EasyNetQ.FluentConfiguration;
 using EasyNetQ.Scheduling;
 
 namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
 {
     public class MongoScheduler : IScheduler
     {
-        private readonly MessageRepository _messageRepository;
-        public MongoScheduler(MessageRepository messageRepository)
+        private readonly IBus _bus;
+
+        public MongoScheduler(IBus bus)
         {
-            _messageRepository = messageRepository;
+            _bus = bus;
         }
 
         public Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string cancellationKey = null) where T : class
@@ -19,26 +19,22 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
             return FuturePublishAsync(futurePublishDate, message, string.Empty, cancellationKey);
         }
 
-        public async Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
+        public Task FuturePublishAsync<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
         {
-            var id = await _messageRepository.SaveFutureMessage<T>(message, futurePublishDate, topic, cancellationKey);
-            await AnnounceAction(id);
-        }
+            var announcement = new Announcement
+            {
+                CancellationKey = cancellationKey,
+                Topic = topic,
+                ExecuteTimestampUtc = futurePublishDate.ToUniversalTime(),
+                Message = message
+            };
 
-        public void FuturePublish<T>(DateTime futurePublishDate, T message, string cancellationKey = null) where T : class
-        {
-            FuturePublishAsync(futurePublishDate, message, cancellationKey).Wait();
-        }
-
-        public void FuturePublish<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
-        {
-            FuturePublishAsync(futurePublishDate, message, topic, cancellationKey).Wait();
+            return _bus.PublishAsync(announcement, topic);
         }
 
         public Task FuturePublishAsync<T>(TimeSpan messageDelay, T message, string cancellationKey = null) where T : class
         {
-            var futurePublishDate = DateTime.UtcNow.Add(messageDelay);
-            return FuturePublishAsync(futurePublishDate, message, cancellationKey);
+            return FuturePublishAsync(messageDelay, message, string.Empty, cancellationKey);
         }
 
         public Task FuturePublishAsync<T>(TimeSpan messageDelay, T message, string topic, string cancellationKey = null) where T : class
@@ -47,26 +43,46 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler
             return FuturePublishAsync(futurePublishDate, message, topic, cancellationKey);
         }
 
+        public Task CancelFuturePublishAsync(string cancellationKey)
+        {
+            return _bus.PublishAsync<Cancelation>(new Cancelation { CancellationKey = cancellationKey });
+        }
+
+
+        public void FuturePublish<T>(DateTime futurePublishDate, T message, string cancellationKey = null) where T : class
+        {
+            FuturePublish(futurePublishDate, message, string.Empty, cancellationKey);
+        }
+
+        public void FuturePublish<T>(DateTime futurePublishDate, T message, string topic, string cancellationKey = null) where T : class
+        {
+            var announcement = new Announcement
+            {
+                CancellationKey = cancellationKey,
+                Topic = topic,
+                ExecuteTimestampUtc = futurePublishDate.ToUniversalTime(),
+                Message = message
+            };
+            _bus.Publish(announcement);
+        }
+
+        
+
         public void FuturePublish<T>(TimeSpan messageDelay, T message, string cancellationKey = null) where T : class
         {
-            FuturePublishAsync(messageDelay, message, cancellationKey).Wait();
+            FuturePublish(messageDelay, message, string.Empty, cancellationKey);
         }
 
         public void FuturePublish<T>(TimeSpan messageDelay, T message, string topic, string cancellationKey = null) where T : class
         {
-            FuturePublishAsync(messageDelay, message, topic, cancellationKey).Wait();
+            var futurePublishDate = DateTime.UtcNow.Add(messageDelay);
+            FuturePublish(futurePublishDate, message, topic, cancellationKey);
         }
 
-        public Task CancelFuturePublishAsync(string cancellationKey)
-        {
-            return _messageRepository.CancelMessage(cancellationKey);
-        }
-
+       
         public void CancelFuturePublish(string cancellationKey)
         {
-            _messageRepository.CancelMessage(cancellationKey).Wait();
+            _bus.Publish(new Cancelation {CancellationKey = cancellationKey});
         }
-
-        public Func<string, Task> AnnounceAction { private get; set; }
     }
 }
