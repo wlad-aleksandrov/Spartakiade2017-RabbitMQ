@@ -122,8 +122,7 @@
                 </section>
                 <section>
                     <h3>Verbindungsaufbau</h3>
-                    <pre><code class="cs">
-using System;
+                    <pre><code class="cs">using System;
 using EasyNetQ;
 
 namepace FP.MsRmq.Connecting
@@ -135,9 +134,7 @@ namepace FP.MsRmq.Connecting
             var myBus = RabbitHutch.CreateBus("host=myRabbitMQ");
         }
     }
-}
-</code>
-                    </pre>
+}</code></pre>
                 </section>
                 <section>
                     <h3>Verbindungsoptionen</h3>
@@ -187,20 +184,15 @@ namepace FP.MsRmq.Connecting
                 </section>
                 <section>
                      Subscribe
-                        <pre><code class="cs">
- myBus.Subscribe&lt;MyClass&gt;("MySub", 
-        msg => DoSomething(msg));
- myBus.SubscribeAsync&lt;MyClass&gt;("MySubAsync",
-        msg => DoSomethingAsync(msg));
-     </code>
-                    </pre>
+                        <pre><code class="cs">myBus.Subscribe&lt;MyClass&gt;("MySub",  msg => DoSomething(msg));
+
+myBus.SubscribeAsync&lt;MyClass&gt;("MySubAsync", msg => DoSomethingAsync(msg));</code></pre>
                     Publish
-                        <pre><code class="cs">
-var msg = new MyClass{};                            
+                        <pre><code class="cs">var msg = new MyClass{};
+
 myBus.Publish(msg);
-myBus.PublishAsync(msg);
-     </code>
-                    </pre>
+
+myBus.PublishAsync(msg);</code></pre>
                 </section>
                 <section>
                     <h3>Topic Based Routing</h3>
@@ -211,17 +203,11 @@ myBus.PublishAsync(msg);
                 </section>
                    <section>
                      Subscribe
-                        <pre><code class="cs">
- myBus.Subscribe&lt;MyClass&gt;("MyTopicSub", 
-        msg => DoSomething(msg), x => x.WithTopic("MyTopic"));
-     </code>
-                    </pre>
+                        <pre><code class="cs">myBus.Subscribe&lt;MyClass&gt;("MyTopicSub",
+  msg => DoSomething(msg), x => x.WithTopic("MyTopic"));</code></pre>
                     Publish
-                        <pre><code class="cs">
-var msg = new MyClass{};                            
-myBus.Publish(msg, "MyTopic");
-     </code>
-                    </pre>
+                        <pre><code class="cs">var msg = new MyClass{};                            
+myBus.Publish(msg, "MyTopic");</code></pre>
                 </section>
                 <section>
                     <h3>Request / Response (RPC)</h3>
@@ -231,16 +217,12 @@ myBus.Publish(msg, "MyTopic");
                 </section>
                 <section>
                     Response
-                        <pre><code class="cs">
-myBus.Respond&lt;MyClass1,MyClass2&gt;(DoSometingWithResult);
-myBus.RespondAsync&lt;MyClass1,MyClass2&gt;(DoSometingAsyncWithResult);
-                    </code></pre>
+                        <pre><code class="cs">myBus.Respond&lt;MyClass1,MyClass2&gt;(DoSometingWithResult);
+myBus.RespondAsync&lt;MyClass1,MyClass2&gt;(DoSometingAsyncWithResult);</code></pre>
                     Request
-                        <pre><code class="cs">
-var req = new MyClass1{};                            
+                        <pre><code class="cs">var req = new MyClass1{};                            
 var result = myBus.Request&lt;MyClass1,MyClass2&gt;(req);
-var result = await myBus.RequestAsync&lt;MyClass1,MyClass2&gt;(req);
-                    </code></pre>
+var result = await myBus.RequestAsync&lt;MyClass1,MyClass2&gt;(req);</code></pre>
                 </section>  
                 <section>
                     <h3>Send / Receive (Command Pipelines)</h3>
@@ -251,17 +233,11 @@ var result = await myBus.RequestAsync&lt;MyClass1,MyClass2&gt;(req);
                 </section>
                  <section>
                     Receive
-                        <pre><code class="cs">
-myBus.Receive("MyMessageQueue", x => x
-    .Add&lt;MyClassA&gt;(DoSomethingWithA)
-    .Add&lt;MyClassB&gt;(DoSomethingWithB);
-                    </code></pre>
+                        <pre><code class="cs">myBus.Receive("MyMessageQueue", x => x
+    .Add&lt;MyClassA&gt;(DoSomethingWithA).Add&lt;MyClassB&gt;(DoSomethingWithB);</code></pre>
                     Request
-                        <pre><code class="cs">
-myBus.Send("MyMessageQueue", new MyClassA {});
-myBus.Send("MyMessageQueue", new MyClassB {});
-
-                    </code></pre>
+                        <pre><code class="cs">myBus.Send("MyMessageQueue", new MyClassA {});
+myBus.Send("MyMessageQueue", new MyClassB {});</code></pre>
                 </section>
             </section>
             <section>
@@ -279,72 +255,45 @@ myBus.Send("MyMessageQueue", new MyClassB {});
                 </section>
                 <section>
                     Netzwerk definieren
-                       <pre>
-                            <code data-trim contenteditable>
-$ docker network create rmqcluster
-                            </code>
-                        </pre>
+                       <pre><code data-trim contenteditable>
+$ docker network create rmqcluster</code></pre>
                       Start Node1 (Master)
-                     <pre>
-                            <code data-trim contenteditable>
-$ docker run -d --hostname rmqNode1 --name rmqNode1 --network=rmqcluster 
-    -p 5672:5672 -p 15672:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim'
-    rabbitmq:3-management
-                            </code>
-                        </pre>
+                     <pre><code data-trim contenteditable>
+$ docker run -d --hostname rmqNode1 --name rmqNode1 --network=rmqcluster -p 5672:5672 
+   -p 15672:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' rabbitmq:3-management</code></pre>
                     Start Node2 (Node mit Persistenz)
-                    <pre>
-                            <code data-trim contenteditable>
-$ docker run -d --hostname rmqNode2 --name rmqNode2 --network=rmqcluster 
-    -p 5673:5672 -p 15673:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' 
-    rabbitmq:3-management
-                            </code>
-                        </pre>
+                    <pre><code data-trim contenteditable>
+$ docker run -d --hostname rmqNode2 --name rmqNode2 --network=rmqcluster -p 5673:5672 
+   -p 15673:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' rabbitmq:3-management</code></pre>
                 </section>
                 <section>
                     Start Node3 (RAM Node)
-                    <pre>
-                            <code data-trim contenteditable>
-$ docker run -d --hostname rmqNode3 --name rmqNode3 --network=rmqcluster 
-    -p 5674:5672 -p 15674:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' 
-    rabbitmq:3-management
-                            </code>
-                        </pre>
+                    <pre><code data-trim contenteditable>
+$ docker run -d --hostname rmqNode3 --name rmqNode3 --network=rmqcluster -p 5674:5672
+  -p 15674:15672 -e RABBITMQ_ERLANG_COOKIE='strenggeheim' rabbitmq:3-management</code></pre>
                     Container zur Konfiguration
-                     <pre>
-                        <code data-trim contenteditable>
-$ docker run -it --rm --network=rmqcluster 
-	-e RABBITMQ_ERLANG_COOKIE='strenggeheim' rabbitmq:3
-    /bin/bash
-                            </code>
-                        </pre>
+                     <pre><code data-trim contenteditable>
+$ docker run -it --rm --network=rmqcluster -e RABBITMQ_ERLANG_COOKIE='strenggeheim'
+    rabbitmq:3 /bin/bash</code></pre>
                 </section>
                 <section>
                         Hinzufügen Node 2
-                        <pre>
-                        <code data-trim contenteditable>
+                        <pre><code data-trim contenteditable>
 rabbitmqctl -n rabbit@rmqNode2 stop_app
 rabbitmqctl -n rabbit@rmqNode2 join_cluster rabbit@rmqNode1
-rabbitmqctl -n rabbit@rmqNode2 start_app
-                              </code>
-                        </pre>
+rabbitmqctl -n rabbit@rmqNode2 start_app</code></pre>
                         Hinzufügen Node 3
-                        <pre>
-                        <code data-trim contenteditable>
+                        <pre><code data-trim contenteditable>
 rabbitmqctl -n rabbit@rmqNode3 stop_app
 rabbitmqctl -n rabbit@rmqNode3 join_cluster --ram rabbit@rmqNode1
-rabbitmqctl -n rabbit@rmqNode3 start_app
-                              </code>
-                        </pre>
+rabbitmqctl -n rabbit@rmqNode3 start_app</code></pre>
                 </section>
                 <section>
                     <h3>Aktivierung der Hochverfügbarkeit</h3>
                     <a href="https://www.rabbitmq.com/ha.html" target="_blank">Info</a>
-                        <pre>
-                        <code data-trim contenteditable>
+                        <pre><code data-trim contenteditable>
                          rabbitmqctl -n rabbit@rmqNode1 set_policy ha-all "" '{"ha-mode":"all"}' 
-                              </code>
-                        </pre>
+                         </code></pre>
                 </section>
             </section>
             <section>
@@ -403,7 +352,6 @@ Set-ExecutionPolicy RemoteSigned
                   </section>
                   <section>
                       TBD: Info für Docker-Images / Compose
-
                   </section>
 			</section>
             <section>
@@ -416,41 +364,31 @@ Set-ExecutionPolicy RemoteSigned
                 </section>
                 <section>
                       Start Cert-Store
-                     <pre>
-                            <code data-trim contenteditable>$ docker run --name certstore 
-    fpommerening/spartakiade2017-rabbitmq:ssl-certstore</code>
-                     </pre>
+                     <pre><code data-trim contenteditable>$ docker run --name certstore 
+    fpommerening/spartakiade2017-rabbitmq:ssl-certstore</code></pre>
                      Starten CA 
-                     <pre>
-                            <code data-trim contenteditable>$ docker run -it --rm --volumes-from certstore 
-    fpommerening/spartakiade2017-rabbitmq:ssl-ca /bin/bash</code>
-                     </pre>
+                     <pre><code data-trim contenteditable>$ docker run -it --rm --volumes-from certstore 
+    fpommerening/spartakiade2017-rabbitmq:ssl-ca /bin/bash</code></pre>
+
                      Zertifikate erstellen
-                      <pre>
-                            <code data-trim contenteditable>cd /usr/local/bin/
+                      <pre><code data-trim contenteditable>cd /usr/local/bin/
 ./ca.sh MyCA
 ./server.sh rabbitServer strenggeheim
-./client.sh rabbitClient strenggeheim</code>
-                     </pre>
+./client.sh rabbitClient strenggeheim</code></pre>
                 </section>
                 <section>
                 Start RabbitMQ mit SSL
-                    <pre>
-                            <code data-trim contenteditable>
+                    <pre><code data-trim contenteditable>
 $ docker run -d --name rabbitssl --volumes-from certstore 
     -p 15671:15671 -p 5671:5671 
     -e RABBITMQ_SSL_CACERTFILE=/rabbitssl/ca/cacert.pem 
     -e RABBITMQ_SSL_CERTFILE=/rabbitssl/server/cert.pem 
     -e RABBITMQ_SSL_KEYFILE=/rabbitssl/server/key.pem 
-    rabbitmq:3-management
-                            </code>
-                     </pre>
+    rabbitmq:3-management</code></pre>
 Client - Zertifikate kopieren
-                      <pre>
-                            <code data-trim contenteditable>
+                      <pre><code data-trim contenteditable>
 $ docker cp certstore:/rabbitssl/client/keycert.p12 .
-                            </code>
-                     </pre>
+                            </code></pre>
                 </section>
                 <section>
                    <h3> EasyNetQ mit SSL</h3>
@@ -491,17 +429,11 @@ myBus = RabbitHutch.CreateBus(connection, services => { });
                    <br />
                    V-Host
                    <br />
-                    <pre><code class="cs">
-var myBus = RabbitHutch.CreateBus(
-    "host=localhost;virtualHost=myHost");
-                    </code></pre>
+                    <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=localhost;virtualHost=myHost");</code></pre>
                      <br />
                     Benutzer / Passwort
                     <br />
-                         <pre><code class="cs">
-var myBus = RabbitHutch.CreateBus(
-    "host=localhost;username=myUser;password=myPasswort");
-                    </code></pre>
+                         <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=localhost;username=myUser;password=myPasswort");</code></pre>
                 </section>
                 <section>
                     TBD: Übersichtsgrafik V-Host
@@ -532,11 +464,11 @@ $ docker run -d --hostname rmqDelayEx --name rmqDelayEx
                     Delayed Message Plugin unterstützt kein Abbruch (Cancelling) von Nachrichten -> NotImplementedException!
                 </section>
                 <section>
-                    TBD: Übersichtsgrafik Mongo
+                    TBD: Übersichtsgrafik Mongo-Scheduler
                 </section>
             </section>
             <section>
-                <h2> TBD: Verknüpfung Node.js + EasyNETQ</h2>
+                <h2> TBD: Verknüpfung PHP + EasyNETQ</h2>
             </section>
             <section>
                 <section>
@@ -555,14 +487,28 @@ $ docker run -d --hostname rmqDelayEx --name rmqDelayEx
 		<script>
 			// More info https://github.com/hakimel/reveal.js#configuration
 			Reveal.initialize({
-				history: true,
+				 controls: true,
+                    progress: true,
+                    history: true,
+                    center: true,
+                    width: 1250,
+                    height: 720,
+                    slideNumber: true,
+                    margin: 0.0,
+
+                    transition: 'slide', // none/fade/slide/convex/concave/zoom
 
 				// More info https://github.com/hakimel/reveal.js#dependencies
 				dependencies: [
-					{ src: 'plugin/markdown/marked.js' },
-					{ src: 'plugin/markdown/markdown.js' },
+                    { src: 'lib/js/classList.js', condition: function () { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function () { return !!document.querySelector('[data-markdown]'); } },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+                    { src: 'plugin/zoom-js/zoom.js', async: true },
+                    { src: 'plugin/notes/notes.js', async: true },
+                    { src: '//cdn.socket.io/socket.io-1.3.5.js', async: true },
+                    { src: '../Common/plugin/multiplex/client.js', async: true }
 				]
 			});
 		</script>
