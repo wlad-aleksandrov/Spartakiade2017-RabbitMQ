@@ -1,6 +1,5 @@
 ﻿using System;
 using EasyNetQ;
-using EasyNetQ.Scheduling;
 using FP.Spartakiade2017.MsRmq.MongoScheduler.Contracts;
 
 namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Recipient
@@ -12,7 +11,7 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Recipient
             IBus myBus = null;
             try
             {
-                myBus = RabbitHutch.CreateBus("host=localhost", register => register.Register<IScheduler, DelayedExchangeScheduler>());
+                myBus = RabbitHutch.CreateBus("host=localhost");
                 myBus.Subscribe<FutureMessage>("FutureMessageSub", msg =>
                 Console.WriteLine($"{DateTime.Now:T}: {msg.Content} (schedule at {msg.Timestamp:T})"));
             }

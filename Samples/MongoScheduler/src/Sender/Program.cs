@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Threading.Tasks;
 using EasyNetQ;
 using EasyNetQ.Scheduling;
 using FP.Spartakiade2017.MsRmq.MongoScheduler.Contracts;
-using FP.Spartakiade2017.MsRmq.MongoScheduler.MongoScheduler;
 
 namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Sender
 {
@@ -17,7 +15,6 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Sender
                 myBus = RabbitHutch.CreateBus("host=localhost",
                    register => register.Register<IScheduler, MongoScheduler.MongoScheduler>());
 
-                StartSubscription(myBus);
                 ScheduleMessage(myBus);
             }
             catch (Exception ex)
@@ -31,15 +28,9 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Sender
             Console.ReadLine();
         }
 
-        private static void StartSubscription(IBus myBus)
-        {
-            myBus.Subscribe<FutureMessage>("MyFutureMessageSubscription", msg => Console.WriteLine($"{DateTime.Now:T}: {msg.Content} (schedule at {msg.Timestamp:T})"));
-
-        }
-
         private static void ScheduleMessage(IBus myBus)
         {
-            string content = string.Empty;
+            string content;
             do
             {
                 Console.WriteLine("Enter the content or nothing to leave");
