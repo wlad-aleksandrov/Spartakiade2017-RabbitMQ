@@ -351,7 +351,15 @@ Set-ExecutionPolicy RemoteSigned
                     </ul>
                   </section>
                   <section>
-                      TBD: Info für Docker-Images / Compose
+                      Der komplette Anwendungstack besteht aus 6 .NET-Services und 3 Infrastruktur-Services die ihre jeweilen Ports veröffentlichen.
+                      <br/>
+                      <br/>
+                      Zum Starten bitte in das docker-compose - File aus dem Ordner /dockerfiles/picflow/ starten.
+                      <pre><code class="docker">docker-compose up</code></pre>
+                      Beenden 
+                      <pre><code class="docker">docker-compose down
+docker-compose rm</code></pre>
+                    Um den eigenen Code zu bauen bitte das Powershell-Script build.ps1 nutzen.
                   </section>
 			</section>
             <section>
@@ -444,9 +452,9 @@ myBus = RabbitHutch.CreateBus(connection, services => { });
                     <h2>Zeitgesteuertes Queuing</h2>
                 </section>
                 <section>
-                    TBD: EasyNetQ IScheduler
+                    <h3>EasyNetQ IScheduler</h3>
+                    Die Implementierungen des Interface IScheduler steuern die zeitversetzte Nachrichtenübertragung.
                 </section>
-
                 <section>
                     RabbitMQ Delayed Message Plugin<br/>
                     <a href="https://github.com/rabbitmq/rabbitmq-delayed-message-exchange/" target="_blank">GitHub</a>
@@ -464,12 +472,18 @@ $ docker run -d --hostname rmqDelayEx --name rmqDelayEx
                     Delayed Message Plugin unterstützt kein Abbruch (Cancelling) von Nachrichten -> NotImplementedException!
                 </section>
                 <section>
-                    TBD: Übersichtsgrafik Mongo-Scheduler
+                    <h3>Mongo Scheduler</h3>
+                    <img src="images/mongoscheduler.svg" style="border:0;" />
+                </section>
+                <section>
+                    
                 </section>
             </section>
+            <!--
             <section>
                 <h2> TBD: Verknüpfung PHP + EasyNETQ</h2>
             </section>
+            -->
             <section>
                 <section>
                     <h2>Weiterführende Informationen</h2>
