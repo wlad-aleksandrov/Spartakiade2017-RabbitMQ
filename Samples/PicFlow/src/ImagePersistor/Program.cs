@@ -8,8 +8,6 @@ namespace FP.Spartakiade2017.PicFlow.ImagePersistor
 {
     public class Program
     {
-       
-
         public static void Main(string[] args)
         {
             var dbCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
