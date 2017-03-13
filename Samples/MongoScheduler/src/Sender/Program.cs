@@ -12,8 +12,7 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Sender
             IBus myBus = null;
             try
             {
-                myBus = RabbitHutch.CreateBus("host=localhost",
-                   register => register.Register<IScheduler, MongoScheduler.MongoScheduler>());
+                // Scheduler integrieren
 
                 ScheduleMessage(myBus);
             }
@@ -41,7 +40,7 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.Sender
                     Console.WriteLine("Enter the delay in seconds");
                     var delayInSeconds = Convert.ToInt32(Console.ReadLine());
 
-                    myBus.FuturePublish(TimeSpan.FromSeconds(delayInSeconds), new FutureMessage { Content = content });
+                    // Nachrichten zeitversetzen einplanen
 
                 }
                 System.Threading.Thread.Sleep(1000);

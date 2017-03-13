@@ -64,14 +64,9 @@ namespace FP.Spartakiade2017.MsRmq.MongoScheduler.SchedulerService
                     try
                     {
                         var mongoMsg = _messageRepository.GetFutureMessageById(job.Key);
-                        if (string.IsNullOrEmpty(mongoMsg.Topic))
-                        {
-                            _bus.Publish(mongoMsg.Content.GetType(), mongoMsg.Content);
-                        }
-                        else
-                        {
-                            _bus.Publish(mongoMsg.Content.GetType(), mongoMsg.Content, mongoMsg.Topic);
-                        }
+
+                        // Nachrichten übergeben
+
                         _jobs.Remove(job.Key);
                         _messageRepository.UpdateState(job.Key, MongoFutureMessageState.Done);
                     }
