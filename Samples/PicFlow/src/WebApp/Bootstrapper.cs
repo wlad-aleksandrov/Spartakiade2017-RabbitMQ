@@ -27,8 +27,9 @@ namespace FP.Spartakiade2017.PicFlow.WebApp
 
         protected override void ApplicationStartup(TinyIoCContainer container, IPipelines pipelines)
         {
-            var bus = RabbitHutch.CreateBus(EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ", "host=localhost"));
-            container.Register<IBus>(bus);
+            //TODO: Bus als Instanz im Container registieren
+            
+
             container.Register(new ImageRepository(EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
                 "host=localhost;database=spartakiade;password=sportfrei;username=spartakiade")));
             var authenticationRepository = new AuthenticationRepository(bus);

@@ -14,26 +14,12 @@ namespace FP.Spartakiade2017.PicFlow.Authorization
             IBus myBus = null;
             try
             {
-                myBus = RabbitHutch.CreateBus(EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ","host=localhost"));
+                // TODO: Authorization - Anfragen annehmen
+
                 var userRepo = new UserRepository(EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
-                    "host=localhost;database=devspacepassword=leipzig;username=devspace"));
-                myBus.SubscribeAsync<AuthenticationRequest>("Auth", async request =>
-                {
-                    var response = new AuthenticationResponse
-                    {
-                        Id = request.Id,
-                    };
+                    "host=localhost;database=spartakiade;password=sportfrei;username=spartakiade"));
 
-                    var userInfo = await userRepo.CheckUser(request.UserName, request.PasswordHash);
-                    if (userInfo.IsValid)
-                    {
-                        response.UserId = userInfo.Id;
-                        response.User = userInfo.User;
-                        response.IsValid = true;
-                    }
-
-                    await myBus.PublishAsync(response);
-                });
+                // TODO: Rückgabe 
 
                 Console.WriteLine("Authorization gestartet...");
                 while (Console.ReadLine() != "quit") { Thread.Sleep(int.MaxValue); }

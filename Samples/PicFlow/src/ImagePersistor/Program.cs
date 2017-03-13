@@ -13,20 +13,19 @@ namespace FP.Spartakiade2017.PicFlow.ImagePersistor
         public static void Main(string[] args)
         {
             var dbCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
-                "host=localhost;database=devspace;password=leipzig;username=devspace");
+                "host=localhost;database=spartakiade;password=sportfrei;username=spartakiade");
             var mongoCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringDocumentDB", "mongodb://localhost");
             var rabbitCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ", "host=localhost");
 
             IBus myBus = null;
             try
             {
-                myBus = RabbitHutch.CreateBus(rabbitCnn);
-                myBus.SubscribeAsync<ImageSaveJob>("ImagePersistor", async job =>
-                {
-                    var dbWriter = new DbWriter(mongoCnn, dbCnn);
-                    await dbWriter.PersistImage(job.Id, job.UserId, job.SourceId, job.Message, job.Resolution);
-                });
-                    
+                // TODO: Speicher - Anfragen annehmen 
+                
+                // Bild speichern
+                //var dbWriter = new DbWriter(mongoCnn, dbCnn);
+                //await dbWriter.PersistImage(...);
+
                 Console.WriteLine("ImagePersistor gestartet...");
                 while (Console.ReadLine() != "quit") { Thread.Sleep(int.MaxValue); }
             }

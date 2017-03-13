@@ -13,10 +13,10 @@ namespace FP.Spartakiade2017.PicFlow.Uploader
 
             try
             {
-                myBus = RabbitHutch.CreateBus(EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ", "host=localhost"));
                 var cnnImageDb = EnvironmentVariable.GetValueOrDefault("ConnectionStringDocumentDB", "mongodb://localhost");
                 var externalAppUrl = EnvironmentVariable.GetValueOrDefault("ExternalAppUrl", "http://localhost:8000/api/postimage");
-                using (var transmittter = new Transmitter(myBus, cnnImageDb, externalAppUrl))
+                // TODO: Verbindungsaufbau
+                using (var transmittter = new Transmitter(cnnImageDb, externalAppUrl))
                 {
                     transmittter.Init();
                     Console.WriteLine("Uploader gestartet...");

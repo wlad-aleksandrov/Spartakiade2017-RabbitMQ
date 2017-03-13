@@ -14,7 +14,7 @@ namespace FP.Spartakiade2017.PicFlow.ExternalApp.Modules
             {
                 var apiUpload = this.Bind<ApiUpload>();
 
-                if (apiUpload.ApiKey.ToLower() != "devspace2016")
+                if (apiUpload.ApiKey.ToLower() != "sparta2017")
                 {
                     return HttpStatusCode.Unauthorized;
                 }

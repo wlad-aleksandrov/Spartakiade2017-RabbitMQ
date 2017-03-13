@@ -10,21 +10,19 @@ namespace FP.Spartakiade2017.PicFlow.Uploader
 {
     public class Transmitter : IDisposable
     {
-        private readonly IBus _myBus;
         private readonly string _mongoConnectionString;
         private IDisposable _subscription;
         private readonly string _externalAppUrl;
 
-        public Transmitter(IBus myBus, string mongoConnectionstring, string externalAppUrl)
+        public Transmitter( string mongoConnectionstring, string externalAppUrl)
         {
-            _myBus = myBus;
             _mongoConnectionString = mongoConnectionstring;
             _externalAppUrl = externalAppUrl;
         }
 
         public void Init()
         {
-            _subscription = _myBus.SubscribeAsync<ImageUploadJob>("UploadSubscription", job => UploadImage(job));
+            // TODO: Subscription für Uploads
         }
 
         private async Task UploadImage(ImageUploadJob job)
@@ -38,7 +36,7 @@ namespace FP.Spartakiade2017.PicFlow.Uploader
             {
                 content.Add(new StringContent(job.User), "User");
                 content.Add(new StringContent(job.Message), "Message");
-                content.Add(new StringContent("devspace2016"), "APIKEY");
+                content.Add(new StringContent("sparta2017"), "APIKEY");
                 content.Add(new ByteArrayContent(image.Data), "Image", image.FileName);
                 await client.PostAsync(_externalAppUrl, content);
             }
@@ -47,8 +45,7 @@ namespace FP.Spartakiade2017.PicFlow.Uploader
 
         public void Dispose()
         {
-            _subscription?.Dispose();
-            _subscription = null;
+            // TODO: Aufräumen
         }
     }
 }

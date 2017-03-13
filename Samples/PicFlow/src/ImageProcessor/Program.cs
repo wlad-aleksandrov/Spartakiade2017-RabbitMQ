@@ -13,9 +13,9 @@ namespace FP.Spartakiade2017.PicFlow.ImageProcessor
 
             try
             {
-                myBus = RabbitHutch.CreateBus(EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ", "host=localhost"));
+                //TODO: Verbindungsaufbau
                 var mongoCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringDocumentDB", "mongodb://localhost");
-                using (var worker = new ImageWorker(myBus, mongoCnn))
+                using (var worker = new ImageWorker(mongoCnn))
                 {
                     worker.Init();
                     Console.WriteLine("ImageProcessor gestartet...");

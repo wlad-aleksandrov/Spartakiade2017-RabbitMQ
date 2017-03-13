@@ -10,39 +10,35 @@ namespace FP.Spartakiade2017.PicFlow.WebApp.Modules
     {
         private readonly ConcurrentDictionary<Guid, AuthUser> userSessions = new ConcurrentDictionary<Guid, AuthUser>();
 
-        private readonly IBus _bus;
-
-        public AuthenticationRepository(IBus bus)
+        public AuthenticationRepository()
         {
-            _bus = bus;
+            // TODO: Subscribe für Authentication-Anfragen
 
-            bus.Subscribe<AuthenticationRequest>("WebAuthRepo", req =>
-            {
-                var authUser = new AuthUser();
-                userSessions.AddOrUpdate(req.Id, authUser, (guid, user) => authUser);
-            });
 
-            bus.Subscribe<AuthenticationResponse>("authRepo", response =>
-            {
-                var authUser = new AuthUser
-                {
-                    Id = response.UserId,
-                    User = response.User,
-                    IsValid = response.IsValid
-                };
-                userSessions.AddOrUpdate(response.Id, authUser, (guid, user) => authUser);
-            });
+            // Anfragen müssen als UserSession gespeichert werden
+
+            // var authUser = new AuthUser();
+            // userSessions.AddOrUpdate(Id, authUser, (guid, user) => authUser);
+
+            // Subscribe für Authentication Rückmeldung 
+
+            // Rückmeldungen als UserSession speichern
+
+            //var authUser = new AuthUser
+            //{
+            //    Id
+            //    User 
+            //    IsValid =
+            //};
+            //userSessions.AddOrUpdate(response.Id, authUser, (guid, user) => authUser);
+
         }
 
         public Task SendAuthorizationRequest(Guid sessionId, string userName, string passwordBase64)
         {
-            var authRequest = new AuthenticationRequest
-            {
-                Id = sessionId,
-                PasswordHash = passwordBase64,
-                UserName = userName
-            };
-            return _bus.PublishAsync(authRequest);
+            // TODO:  Anfragen zur Authorization senden
+
+            return null;
         }
 
         public AuthUser GetAuthUserBySessionId(Guid sessionId)

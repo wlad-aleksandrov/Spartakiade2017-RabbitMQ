@@ -2,7 +2,6 @@
 using System.IO;
 using System.Threading.Tasks;
 using EasyNetQ;
-using EasyNetQ.NonGeneric;
 using FP.Spartakiade2017.PicFlow.Contracts.Dto;
 using FP.Spartakiade2017.PicFlow.Contracts.FileHandler;
 using FP.Spartakiade2017.PicFlow.Contracts.Messages;
@@ -12,19 +11,17 @@ namespace FP.Spartakiade2017.PicFlow.ImageProcessor
 {
     public class ImageWorker : IDisposable
     {
-        private readonly IBus _bus;
         private IDisposable _subscription;
         private readonly string _imageDbConnectionString;
 
-        public ImageWorker(IBus bus, string imageDbConnectionString)
+        public ImageWorker(string imageDbConnectionString)
         {
-            _bus = bus;
             _imageDbConnectionString = imageDbConnectionString;
         }
 
         public void Init()
         {
-            _subscription = _bus.SubscribeAsync<ImageProcessingJob>("ImageProcessor", job => WorkImage(job));
+            // subscription für Verarbeitungsjob
         }
 
         private async Task WorkImage(ImageProcessingJob job)
@@ -38,7 +35,8 @@ namespace FP.Spartakiade2017.PicFlow.ImageProcessor
             foreach (var successor in job.Successors)
             {
                 successor.Id = id;
-                await _bus.PublishAsync(successor.GetType(), successor);
+                // Nachfolgeprozess starten
+                
             }
         }
 
@@ -100,8 +98,7 @@ namespace FP.Spartakiade2017.PicFlow.ImageProcessor
 
         public void Dispose()
         {
-            _subscription?.Dispose();
-            _subscription = null;
+           // Aufräumen
         }
     }
 }
