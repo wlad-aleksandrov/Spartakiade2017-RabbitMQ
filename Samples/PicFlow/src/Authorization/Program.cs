@@ -16,7 +16,7 @@ namespace FP.Spartakiade2017.PicFlow.Authorization
             {
                 myBus = RabbitHutch.CreateBus(EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ","host=localhost"));
                 var userRepo = new UserRepository(EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
-                    "host=localhost;database=devspacepassword=leipzig;username=devspace"));
+                    "host=localhost;database=spartakiade;password=sportfrei;username=spartakiade"));
                 myBus.SubscribeAsync<AuthenticationRequest>("Auth", async request =>
                 {
                     var response = new AuthenticationResponse

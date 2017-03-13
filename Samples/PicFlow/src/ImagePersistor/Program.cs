@@ -8,12 +8,10 @@ namespace FP.Spartakiade2017.PicFlow.ImagePersistor
 {
     public class Program
     {
-       
-
         public static void Main(string[] args)
         {
             var dbCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringImageDB",
-                "host=localhost;database=devspace;password=leipzig;username=devspace");
+                "host=localhost;database=spartakiade;password=sportfrei;username=spartakiade");
             var mongoCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringDocumentDB", "mongodb://localhost");
             var rabbitCnn = EnvironmentVariable.GetValueOrDefault("ConnectionStringRabbitMQ", "host=localhost");
 
