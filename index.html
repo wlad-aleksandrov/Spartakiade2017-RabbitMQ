@@ -426,10 +426,33 @@ myBus = RabbitHutch.CreateBus(connection, services => { });
             </section>
             <section>
                 <section>
-                <h2> V-HOSTS Benutzer / Password</h2>
+                <h2> V-HOSTS und Benutzer</h2>
                 </section>
                 <section>
-                    TBD: Screenshot Management
+                    <img src="images/vhost.svg" style="border:0;height:500px;"/>
+                </section>
+                <section>
+                    <h3>Anlegen Benutzer per Management-UI</h3>
+                   <img src="images/adduser.png" style="border:0;height:500px; float: right"/>
+                    Admin -> User -> Add a User<br />
+                    <br /><h3>Tags</h3>
+                    Die Tage schalten Funktionen wie den Zugriff auf die Management-UI frei. 
+                    Die Pflege erfolgt per Links unterhalb der Textbox - nicht manuell!
+                </section>
+                <section>
+                    <h3>Anlegen V-Host per Management-UI</h3>
+                    Admin -> Virtual Host -> Add a new virtual host
+                    <img src="images/addvhost.png" style="border:0;height:400px;"/>
+                </section>
+                <section>
+                    <h3>V-Host - Benutzer - Zuordnung </h3>
+                    <img src="images/uservhost.png" style="border:0;height:450px;float: right"/>
+                    <ol>
+                        <li>Benutzer auswählen</li>
+                        <li>V-Host auswählen</li>
+                        <li>Berechtigungen ggf. einschränken</li>
+                        <li>Bestätigung mit 'Set Permission'</li>
+                    </ol>
                 </section>
                 <section>
                    Verbindung mit V-Host und / oder alternativem Benutzer erfolgt per Connectionstring.
@@ -443,9 +466,6 @@ myBus = RabbitHutch.CreateBus(connection, services => { });
                     <br />
                          <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=localhost;username=myUser;password=myPasswort");</code></pre>
                 </section>
-                <section>
-                    TBD: Übersichtsgrafik V-Host
-                </section>
             </section>
             <section>
                 <section>
@@ -454,6 +474,11 @@ myBus = RabbitHutch.CreateBus(connection, services => { });
                 <section>
                     <h3>EasyNetQ IScheduler</h3>
                     Die Implementierungen des Interface IScheduler steuern die zeitversetzte Nachrichtenübertragung.
+                    <br />
+                    <br />
+                    Die Auswahl der Implementierung erfolgt per Registierung.
+                    <pre><code class="cs">var myBus = RabbitHutch.CreateBus("host=localhost",
+   register => register.Register&lt;IScheduler,MongoScheduler.MongoScheduler&gt;());</code></pre>
                 </section>
                 <section>
                     RabbitMQ Delayed Message Plugin<br/>
@@ -474,9 +499,6 @@ $ docker run -d --hostname rmqDelayEx --name rmqDelayEx
                 <section>
                     <h3>Mongo Scheduler</h3>
                     <img src="images/mongoscheduler.svg" style="border:0;" />
-                </section>
-                <section>
-                    
                 </section>
             </section>
             <!--

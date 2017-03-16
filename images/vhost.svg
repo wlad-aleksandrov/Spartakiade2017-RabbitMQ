@@ -1,0 +1,726 @@
+<?xml version="1.0"?>
+<svg width="860" height="510" xmlns="http://www.w3.org/2000/svg" xmlns:svg="http://www.w3.org/2000/svg" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:xlink="http://www.w3.org/1999/xlink">
+ <STYLE xmlns="http://www.w3.org/1999/xhtml"/>
+ <defs>
+  <linearGradient y2="NaN" y1="NaN" x2="NaN" x1="NaN" id="ZmuOHIvfzylt">
+   <stop stop-color="#666666" offset="0"/>
+   <stop stop-color="#FFFFFF" offset="1"/>
+  </linearGradient>
+ </defs>
+ <g>
+  <title>Layer 1</title>
+  <g id="svg_4" transform="matrix(1,0,0,1,20,20) ">
+   <g id="svg_5">
+    <g id="svg_6" transform="translate(0,0) scale(8.199999809265137,4.699999809265137) ">
+     <g id="svg_7">
+      <path id="svg_8" d="m10.060976,0.106383l80,0q10,0 10,10l0,80q0,10 -10,10l-80,0q-10,0 -10,-10l0,-80q0,-10 10,-10z" fill="none"/>
+      <g id="svg_9" transform="translate(0.060975611209869385,0.10638298094272614) scale(0.12195122241973877,0.21276596188545227) ">
+       <path id="svg_10" d="m10,0l800,0q10,0 10,10l0,450q0,10 -10,10l-800,0q-10,0 -10,-10l0,-450q0,-10 10,-10z" fill="url(#ZmuOHIvfzylt)"/>
+       <path id="svg_11" stroke-width="5" stroke-miterlimit="10" d="m10,0m0,0l800,0q10,0 10,10l0,450q0,10 -10,10l-800,0q-10,0 -10,-10l0,-450q0,-10 10,-10z" stroke="#ff6600" fill="url(#ZmuOHIvfzylt)"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_12" transform="matrix(1,0,0,1,50,40) ">
+   <g id="svg_13">
+    <g id="svg_14" transform="translate(0,0) scale(2.4000000953674316,3.200000047683716) ">
+     <g id="svg_15">
+      <path id="svg_16" d="m10,0l80,0q10,0 10,10l0,80q0,10 -10,10l-80,0q-10,0 -10,-10l0,-80q0,-10 10,-10z" fill="none"/>
+      <g id="svg_17" transform="scale(0.4166666567325592,0.3125) ">
+       <path id="svg_18" d="m10,0l220,0q10,0 10,10l0,300q0,10 -10,10l-220,0q-10,0 -10,-10l0,-300q0,-10 10,-10z" fill="#FFFFFF"/>
+       <path id="svg_19" stroke-width="2" stroke-miterlimit="10" d="m10,0m0,0l220,0q10,0 10,10l0,300q0,10 -10,10l-220,0q-10,0 -10,-10l0,-300q0,-10 10,-10z" stroke="#ff6600" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_20" transform="matrix(1,0,0,1,60,48) ">
+   <g id="svg_21" transform="translate(-216,0) ">
+    <g id="svg_22">
+     <rect id="svg_23" fill-opacity="0" height="22" width="222" y="0" x="216" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_24" transform="translate(-216,0) ">
+    <g id="svg_25">
+     <rect id="svg_26" fill-opacity="0" height="22" width="222" y="0" x="216" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_27" transform="translate(-216,0) ">
+    <g id="svg_28">
+     <rect id="svg_29" fill-opacity="0" height="22" width="6" y="0" x="324" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_30" transform="translate(-216,0) ">
+    <g id="svg_31">
+     <rect id="svg_32" fill-opacity="0" height="22" width="6" y="0" x="324" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_33" y="18" x="324" font-weight="bold" font-style="normal" font-size="20px" font-family="Arial" fill="rgb(0, 0, 0)">/</text>
+   </g>
+  </g>
+  <g id="svg_34" transform="matrix(1,0,0,1,50,400) ">
+   <image id="svg_35" x="0" y="0" xlink:href="data:image/png;base64,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" height="67" width="350"/>
+  </g>
+  <g id="svg_36" transform="matrix(1,0,0,1,310,40) ">
+   <g id="svg_37">
+    <g id="svg_38" transform="translate(0,0) scale(2.4000000953674316,3.200000047683716) ">
+     <g id="svg_39">
+      <path id="svg_40" d="m10,0l80,0q10,0 10,10l0,80q0,10 -10,10l-80,0q-10,0 -10,-10l0,-80q0,-10 10,-10z" fill="none"/>
+      <g id="svg_41" transform="scale(0.4166666567325592,0.3125) ">
+       <path id="svg_42" d="m10,0l220,0q10,0 10,10l0,300q0,10 -10,10l-220,0q-10,0 -10,-10l0,-300q0,-10 10,-10z" fill="#FFFFFF"/>
+       <path id="svg_43" stroke-width="2" stroke-miterlimit="10" d="m10,0m0,0l220,0q10,0 10,10l0,300q0,10 -10,10l-220,0q-10,0 -10,-10l0,-300q0,-10 10,-10z" stroke="#ff6600" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_44" transform="matrix(1,0,0,1,320,48) ">
+   <g id="svg_45" transform="translate(-108,0) ">
+    <g id="svg_46">
+     <rect id="svg_47" fill-opacity="0" height="22" width="222" y="0" x="108" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_48" transform="translate(-108,0) ">
+    <g id="svg_49">
+     <rect id="svg_50" fill-opacity="0" height="22" width="222" y="0" x="108" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_51" transform="translate(-108,0) ">
+    <g id="svg_52">
+     <rect id="svg_53" fill-opacity="0" height="22" width="114" y="0" x="162" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_54" transform="translate(-108,0) ">
+    <g id="svg_55">
+     <rect id="svg_56" fill-opacity="0" height="22" width="114" y="0" x="162" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_57" y="18" x="162" font-weight="bold" font-style="normal" font-size="20px" font-family="Arial" fill="rgb(0, 0, 0)">Customer</text>
+    <text id="svg_58" y="18" x="261" font-weight="bold" font-style="normal" font-size="20px" font-family="Arial" fill="rgb(0, 0, 0)">A</text>
+   </g>
+  </g>
+  <g id="svg_59" transform="matrix(1,0,0,1,570,40) ">
+   <g id="svg_60">
+    <g id="svg_61" transform="translate(0,0) scale(2.4000000953674316,3.200000047683716) ">
+     <g id="svg_62">
+      <path id="svg_63" d="m10,0l80,0q10,0 10,10l0,80q0,10 -10,10l-80,0q-10,0 -10,-10l0,-80q0,-10 10,-10z" fill="none"/>
+      <g id="svg_64" transform="scale(0.4166666567325592,0.3125) ">
+       <path id="svg_65" d="m10,0l220,0q10,0 10,10l0,300q0,10 -10,10l-220,0q-10,0 -10,-10l0,-300q0,-10 10,-10z" fill="#FFFFFF"/>
+       <path id="svg_66" stroke-width="2" stroke-miterlimit="10" d="m10,0m0,0l220,0q10,0 10,10l0,300q0,10 -10,10l-220,0q-10,0 -10,-10l0,-300q0,-10 10,-10z" stroke="#ff6600" fill="none"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_67" transform="matrix(1,0,0,1,580,48) ">
+   <g id="svg_68" transform="translate(-108,0) ">
+    <g id="svg_69">
+     <rect id="svg_70" fill-opacity="0" height="22" width="222" y="0" x="108" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_71" transform="translate(-108,0) ">
+    <g id="svg_72">
+     <rect id="svg_73" fill-opacity="0" height="22" width="222" y="0" x="108" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_74" transform="translate(-108,0) ">
+    <g id="svg_75">
+     <rect id="svg_76" fill-opacity="0" height="22" width="114" y="0" x="162" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_77" transform="translate(-108,0) ">
+    <g id="svg_78">
+     <rect id="svg_79" fill-opacity="0" height="22" width="114" y="0" x="162" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_80" y="18" x="162" font-weight="bold" font-style="normal" font-size="20px" font-family="Arial" fill="rgb(0, 0, 0)">Customer</text>
+    <text id="svg_81" y="18" x="261" font-weight="bold" font-style="normal" font-size="20px" font-family="Arial" fill="rgb(0, 0, 0)">B</text>
+   </g>
+  </g>
+  <g id="svg_82" transform="matrix(1,0,0,1,337.00000000000006,118) ">
+   <g id="svg_83">
+    <g id="svg_84">
+     <g id="svg_85">
+      <g id="svg_86">
+       <path id="svg_87" stroke-miterlimit="10" stroke-opacity="0" d="m63.473621,73.080892c-0.042539,-13.730866 -7.081697,-23.177202 -19.354139,-26.760921c7.452392,-4.21697 12.494252,-12.188072 12.494252,-21.314757c-0.001013,-13.51306 -11.041856,-24.505215 -24.613757,-24.505215c-13.570889,0 -24.612745,10.992155 -24.612745,24.505215c0,9.158953 5.076296,17.154255 12.571227,21.359125c-12.190403,3.654304 -19.387563,13.205509 -19.432127,26.717561c-0.071911,0.538465 -0.066847,1.728333 0.986495,3.088613c3.253205,4.199828 13.510119,6.329489 30.48715,6.329489c16.977031,0 27.23597,-2.129661 30.488163,-6.329489c1.052329,-1.361289 1.058406,-2.550148 0.985482,-3.089621z" stroke="rgb(0,0,0)" fill="#cc0000"/>
+      </g>
+      <g id="svg_88">
+       <path id="svg_89" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m31.999976,3.525086c-11.89567,0 -21.574259,9.635908 -21.574259,21.480128c0,9.353566 6.047599,17.308535 14.445972,20.248918c2.235312,0.782489 4.627613,1.23121 7.128287,1.23121c2.517892,0 4.927411,-0.454771 7.176903,-1.248352c8.374066,-2.954501 14.397357,-10.895352 14.397357,-20.230768c0,-11.845229 -9.677576,-21.481137 -21.574259,-21.481137z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+      <g id="svg_90">
+       <path id="svg_91" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m3.564817,73.206938l-0.021269,0.351918c0.021269,0.154279 0.122552,0.51729 0.585415,1.010379c1.382511,1.475234 6.865964,4.90669 27.871014,4.90669c21.744414,0 26.88148,-3.602878 28.082695,-5.151722c0.277515,-0.359985 0.403106,-0.731062 0.403106,-0.731062l-0.050641,-0.386203c0,-13.792376 -7.533418,-22.568151 -20.946306,-24.860158c-2.363942,0.753246 -4.878795,1.16365 -7.490879,1.16365c-2.590815,0 -5.087437,-0.403345 -7.434161,-1.146508c-13.284258,2.347467 -20.998973,11.263404 -20.998973,24.843016z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_92" transform="matrix(1,0,0,1,347,202) ">
+   <g id="svg_93" transform="translate(-6,0) ">
+    <g id="svg_94">
+     <rect id="svg_95" fill-opacity="0" height="14" width="43" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_96" transform="translate(-6,0) ">
+    <g id="svg_97">
+     <rect id="svg_98" fill-opacity="0" height="14" width="43" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_99" transform="translate(-6,0) ">
+    <g id="svg_100">
+     <rect id="svg_101" fill-opacity="0" height="14" width="37" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_102" transform="translate(-6,0) ">
+    <g id="svg_103">
+     <rect id="svg_104" fill-opacity="0" height="14" width="37" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_105" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">User</text>
+    <text id="svg_106" y="11" x="38" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">A</text>
+   </g>
+  </g>
+  <g id="svg_107" transform="matrix(1,0,0,1,430,118) ">
+   <g id="svg_108">
+    <g id="svg_109">
+     <g id="svg_110">
+      <g id="svg_111">
+       <path id="svg_112" stroke-miterlimit="10" stroke-opacity="0" d="m63.473621,73.080892c-0.042539,-13.730866 -7.081697,-23.177202 -19.354139,-26.760921c7.452392,-4.21697 12.494252,-12.188072 12.494252,-21.314757c-0.001013,-13.51306 -11.041856,-24.505215 -24.613757,-24.505215c-13.570889,0 -24.612745,10.992155 -24.612745,24.505215c0,9.158953 5.076296,17.154255 12.571227,21.359125c-12.190403,3.654304 -19.387563,13.205509 -19.432127,26.717561c-0.071911,0.538465 -0.066847,1.728333 0.986495,3.088613c3.253205,4.199828 13.510119,6.329489 30.48715,6.329489c16.977031,0 27.23597,-2.129661 30.488163,-6.329489c1.052329,-1.361289 1.058406,-2.550148 0.985482,-3.089621z" stroke="rgb(0,0,0)" fill="#38761d"/>
+      </g>
+      <g id="svg_113">
+       <path id="svg_114" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m31.999976,3.525086c-11.89567,0 -21.574259,9.635908 -21.574259,21.480128c0,9.353566 6.047599,17.308535 14.445972,20.248918c2.235312,0.782489 4.627613,1.23121 7.128287,1.23121c2.517892,0 4.927411,-0.454771 7.176903,-1.248352c8.374066,-2.954501 14.397357,-10.895352 14.397357,-20.230768c0,-11.845229 -9.677576,-21.481137 -21.574259,-21.481137z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+      <g id="svg_115">
+       <path id="svg_116" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m3.564817,73.206938l-0.021269,0.351918c0.021269,0.154279 0.122552,0.51729 0.585415,1.010379c1.382511,1.475234 6.865964,4.90669 27.871014,4.90669c21.744414,0 26.88148,-3.602878 28.082695,-5.151722c0.277515,-0.359985 0.403106,-0.731062 0.403106,-0.731062l-0.050641,-0.386203c0,-13.792376 -7.533418,-22.568151 -20.946306,-24.860158c-2.363942,0.753246 -4.878795,1.16365 -7.490879,1.16365c-2.590815,0 -5.087437,-0.403345 -7.434161,-1.146508c-13.284258,2.347467 -20.998973,11.263404 -20.998973,24.843016z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_117" transform="matrix(1,0,0,1,440,202) ">
+   <g id="svg_118" transform="translate(-6,0) ">
+    <g id="svg_119">
+     <rect id="svg_120" fill-opacity="0" height="14" width="43" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_121" transform="translate(-6,0) ">
+    <g id="svg_122">
+     <rect id="svg_123" fill-opacity="0" height="14" width="43" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_124" transform="translate(-6,0) ">
+    <g id="svg_125">
+     <rect id="svg_126" fill-opacity="0" height="14" width="37" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_127" transform="translate(-6,0) ">
+    <g id="svg_128">
+     <rect id="svg_129" fill-opacity="0" height="14" width="37" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_130" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">User</text>
+    <text id="svg_131" y="11" x="38" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">B</text>
+   </g>
+  </g>
+  <g id="svg_132" transform="matrix(1,0,0,1,60,255) ">
+   <g id="svg_133">
+    <g id="svg_134" transform="translate(0,0) scale(1) ">
+     <g id="svg_135">
+      <g id="svg_136">
+       <g id="svg_137">
+        <path id="svg_138" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_139">
+       <g id="svg_140">
+        <path id="svg_141" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_142">
+       <g id="svg_143">
+        <path id="svg_144" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_145" transform="matrix(1,0,0,1,65,300) ">
+   <g id="svg_146" transform="translate(-6,0) ">
+    <g id="svg_147">
+     <rect id="svg_148" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_149" transform="translate(-6,0) ">
+    <g id="svg_150">
+     <rect id="svg_151" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_152" transform="translate(-6,0) ">
+    <g id="svg_153">
+     <rect id="svg_154" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_155" transform="translate(-6,0) ">
+    <g id="svg_156">
+     <rect id="svg_157" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_158" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_159" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">A</text>
+   </g>
+  </g>
+  <g id="svg_160" transform="matrix(1,0,0,1,133,255) ">
+   <g id="svg_161">
+    <g id="svg_162" transform="translate(0,0) scale(1) ">
+     <g id="svg_163">
+      <g id="svg_164">
+       <g id="svg_165">
+        <path id="svg_166" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_167">
+       <g id="svg_168">
+        <path id="svg_169" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_170">
+       <g id="svg_171">
+        <path id="svg_172" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_173" transform="matrix(1,0,0,1,138,300) ">
+   <g id="svg_174" transform="translate(-6,0) ">
+    <g id="svg_175">
+     <rect id="svg_176" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_177" transform="translate(-6,0) ">
+    <g id="svg_178">
+     <rect id="svg_179" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_180" transform="translate(-6,0) ">
+    <g id="svg_181">
+     <rect id="svg_182" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_183" transform="translate(-6,0) ">
+    <g id="svg_184">
+     <rect id="svg_185" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_186" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_187" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">B</text>
+   </g>
+  </g>
+  <g id="svg_188" transform="matrix(1,0,0,1,324.32200000000006,255) ">
+   <g id="svg_189">
+    <g id="svg_190" transform="translate(0,0) scale(1) ">
+     <g id="svg_191">
+      <g id="svg_192">
+       <g id="svg_193">
+        <path id="svg_194" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_195">
+       <g id="svg_196">
+        <path id="svg_197" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_198">
+       <g id="svg_199">
+        <path id="svg_200" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_201" transform="matrix(1,0,0,1,330,300) ">
+   <g id="svg_202" transform="translate(-6,0) ">
+    <g id="svg_203">
+     <rect id="svg_204" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_205" transform="translate(-6,0) ">
+    <g id="svg_206">
+     <rect id="svg_207" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_208" transform="translate(-6,0) ">
+    <g id="svg_209">
+     <rect id="svg_210" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_211" transform="translate(-6,0) ">
+    <g id="svg_212">
+     <rect id="svg_213" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_214" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_215" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">A</text>
+   </g>
+  </g>
+  <g id="svg_216" transform="matrix(1,0,0,1,206,255) ">
+   <g id="svg_217">
+    <g id="svg_218" transform="translate(0,0) scale(1) ">
+     <g id="svg_219">
+      <g id="svg_220">
+       <g id="svg_221">
+        <path id="svg_222" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_223">
+       <g id="svg_224">
+        <path id="svg_225" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_226">
+       <g id="svg_227">
+        <path id="svg_228" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_229" transform="matrix(1,0,0,1,211,300) ">
+   <g id="svg_230" transform="translate(-6,0) ">
+    <g id="svg_231">
+     <rect id="svg_232" fill-opacity="0" height="14" width="55" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_233" transform="translate(-6,0) ">
+    <g id="svg_234">
+     <rect id="svg_235" fill-opacity="0" height="14" width="55" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_236" transform="translate(-6,0) ">
+    <g id="svg_237">
+     <rect id="svg_238" fill-opacity="0" height="14" width="49" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_239" transform="translate(-6,0) ">
+    <g id="svg_240">
+     <rect id="svg_241" fill-opacity="0" height="14" width="49" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_242" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_243" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">C</text>
+   </g>
+  </g>
+  <g id="svg_244" transform="matrix(1,0,0,1,400.00000000000006,255) ">
+   <g id="svg_245">
+    <g id="svg_246" transform="translate(0,0) scale(1) ">
+     <g id="svg_247">
+      <g id="svg_248">
+       <g id="svg_249">
+        <path id="svg_250" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_251">
+       <g id="svg_252">
+        <path id="svg_253" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_254">
+       <g id="svg_255">
+        <path id="svg_256" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_257" transform="matrix(1,0,0,1,405,300) ">
+   <g id="svg_258" transform="translate(-6,0) ">
+    <g id="svg_259">
+     <rect id="svg_260" fill-opacity="0" height="14" width="55" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_261" transform="translate(-6,0) ">
+    <g id="svg_262">
+     <rect id="svg_263" fill-opacity="0" height="14" width="55" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_264" transform="translate(-6,0) ">
+    <g id="svg_265">
+     <rect id="svg_266" fill-opacity="0" height="14" width="49" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_267" transform="translate(-6,0) ">
+    <g id="svg_268">
+     <rect id="svg_269" fill-opacity="0" height="14" width="49" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_270" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_271" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">D</text>
+   </g>
+  </g>
+  <g id="svg_272" transform="matrix(1,0,0,1,580,255) ">
+   <g id="svg_273">
+    <g id="svg_274" transform="translate(0,0) scale(1) ">
+     <g id="svg_275">
+      <g id="svg_276">
+       <g id="svg_277">
+        <path id="svg_278" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_279">
+       <g id="svg_280">
+        <path id="svg_281" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_282">
+       <g id="svg_283">
+        <path id="svg_284" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_285" transform="matrix(1,0,0,1,585,300) ">
+   <g id="svg_286" transform="translate(-6,0) ">
+    <g id="svg_287">
+     <rect id="svg_288" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_289" transform="translate(-6,0) ">
+    <g id="svg_290">
+     <rect id="svg_291" fill-opacity="0" height="14" width="54" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_292" transform="translate(-6,0) ">
+    <g id="svg_293">
+     <rect id="svg_294" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_295" transform="translate(-6,0) ">
+    <g id="svg_296">
+     <rect id="svg_297" fill-opacity="0" height="14" width="48" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_298" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_299" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">A</text>
+   </g>
+  </g>
+  <g id="svg_300" transform="matrix(1,0,0,1,475.6780000000001,255) ">
+   <g id="svg_301">
+    <g id="svg_302" transform="translate(0,0) scale(1) ">
+     <g id="svg_303">
+      <g id="svg_304">
+       <g id="svg_305">
+        <path id="svg_306" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_307">
+       <g id="svg_308">
+        <path id="svg_309" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_310">
+       <g id="svg_311">
+        <path id="svg_312" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_313" transform="matrix(1,0,0,1,482,300) ">
+   <g id="svg_314" transform="translate(-6,0) ">
+    <g id="svg_315">
+     <rect id="svg_316" fill-opacity="0" height="14" width="53" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_317" transform="translate(-6,0) ">
+    <g id="svg_318">
+     <rect id="svg_319" fill-opacity="0" height="14" width="53" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_320" transform="translate(-6,0) ">
+    <g id="svg_321">
+     <rect id="svg_322" fill-opacity="0" height="14" width="47" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_323" transform="translate(-6,0) ">
+    <g id="svg_324">
+     <rect id="svg_325" fill-opacity="0" height="14" width="47" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_326" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_327" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">X</text>
+   </g>
+  </g>
+  <g id="svg_328" transform="matrix(1,0,0,1,612.8389999999999,118) ">
+   <g id="svg_329">
+    <g id="svg_330">
+     <g id="svg_331">
+      <g id="svg_332">
+       <path id="svg_333" stroke-miterlimit="10" stroke-opacity="0" d="m63.473621,73.080892c-0.042539,-13.730866 -7.081697,-23.177202 -19.354139,-26.760921c7.452392,-4.21697 12.494252,-12.188072 12.494252,-21.314757c-0.001013,-13.51306 -11.041856,-24.505215 -24.613757,-24.505215c-13.570889,0 -24.612745,10.992155 -24.612745,24.505215c0,9.158953 5.076296,17.154255 12.571227,21.359125c-12.190403,3.654304 -19.387563,13.205509 -19.432127,26.717561c-0.071911,0.538465 -0.066847,1.728333 0.986495,3.088613c3.253205,4.199828 13.510119,6.329489 30.48715,6.329489c16.977031,0 27.23597,-2.129661 30.488163,-6.329489c1.052329,-1.361289 1.058406,-2.550148 0.985482,-3.089621z" stroke="rgb(0,0,0)" fill="#3966A0"/>
+      </g>
+      <g id="svg_334">
+       <path id="svg_335" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m31.999976,3.525086c-11.89567,0 -21.574259,9.635908 -21.574259,21.480128c0,9.353566 6.047599,17.308535 14.445972,20.248918c2.235312,0.782489 4.627613,1.23121 7.128287,1.23121c2.517892,0 4.927411,-0.454771 7.176903,-1.248352c8.374066,-2.954501 14.397357,-10.895352 14.397357,-20.230768c0,-11.845229 -9.677576,-21.481137 -21.574259,-21.481137z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+      <g id="svg_336">
+       <path id="svg_337" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m3.564817,73.206938l-0.021269,0.351918c0.021269,0.154279 0.122552,0.51729 0.585415,1.010379c1.382511,1.475234 6.865964,4.90669 27.871014,4.90669c21.744414,0 26.88148,-3.602878 28.082695,-5.151722c0.277515,-0.359985 0.403106,-0.731062 0.403106,-0.731062l-0.050641,-0.386203c0,-13.792376 -7.533418,-22.568151 -20.946306,-24.860158c-2.363942,0.753246 -4.878795,1.16365 -7.490879,1.16365c-2.590815,0 -5.087437,-0.403345 -7.434161,-1.146508c-13.284258,2.347467 -20.998973,11.263404 -20.998973,24.843016z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_338" transform="matrix(1,0,0,1,622,202) ">
+   <g id="svg_339" transform="translate(-6,0) ">
+    <g id="svg_340">
+     <rect id="svg_341" fill-opacity="0" height="14" width="44" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_342" transform="translate(-6,0) ">
+    <g id="svg_343">
+     <rect id="svg_344" fill-opacity="0" height="14" width="44" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_345" transform="translate(-6,0) ">
+    <g id="svg_346">
+     <rect id="svg_347" fill-opacity="0" height="14" width="38" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_348" transform="translate(-6,0) ">
+    <g id="svg_349">
+     <rect id="svg_350" fill-opacity="0" height="14" width="38" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_351" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">User</text>
+    <text id="svg_352" y="11" x="38" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">C</text>
+   </g>
+  </g>
+  <g id="svg_353" transform="matrix(1,0,0,1,660,255) ">
+   <g id="svg_354">
+    <g id="svg_355" transform="translate(0,0) scale(1) ">
+     <g id="svg_356">
+      <g id="svg_357">
+       <g id="svg_358">
+        <path id="svg_359" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_360">
+       <g id="svg_361">
+        <path id="svg_362" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_363">
+       <g id="svg_364">
+        <path id="svg_365" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_366" transform="matrix(1,0,0,1,666,300) ">
+   <g id="svg_367" transform="translate(-6,0) ">
+    <g id="svg_368">
+     <rect id="svg_369" fill-opacity="0" height="14" width="53" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_370" transform="translate(-6,0) ">
+    <g id="svg_371">
+     <rect id="svg_372" fill-opacity="0" height="14" width="53" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_373" transform="translate(-6,0) ">
+    <g id="svg_374">
+     <rect id="svg_375" fill-opacity="0" height="14" width="47" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_376" transform="translate(-6,0) ">
+    <g id="svg_377">
+     <rect id="svg_378" fill-opacity="0" height="14" width="47" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_379" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_380" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Z</text>
+   </g>
+  </g>
+  <g id="svg_381" transform="matrix(1,0,0,1,735.678,255) ">
+   <g id="svg_382">
+    <g id="svg_383" transform="translate(0,0) scale(1) ">
+     <g id="svg_384">
+      <g id="svg_385">
+       <g id="svg_386">
+        <path id="svg_387" stroke-miterlimit="10" stroke-opacity="0" d="m0,0l65.678,0l0,39.727l-65.678,0l0,-39.727z" stroke="rgb(0,0,0)" fill="#D9A741"/>
+       </g>
+      </g>
+      <g id="svg_388">
+       <g id="svg_389">
+        <path id="svg_390" stroke-miterlimit="10" stroke-opacity="0" d="m0,39.727l65.678,0q0,0 0,0l0,2.91q0,0 0,0l-65.678,0q0,0 0,0l0,-2.91q0,0 0,0z" stroke="rgb(0,0,0)" fill="#876929"/>
+       </g>
+      </g>
+      <g id="svg_391">
+       <g id="svg_392">
+        <path id="svg_393" stroke-miterlimit="10" stroke-opacity="0" d="m6.549,26.496l-0.074,-12.379l5.431,6.191l-5.357,6.188zm17.053,8.811l-6.676,0l0,-29.959l6.676,0l0,29.959zm12.905,0l-6.677,0l0,-29.959l6.677,0l0,29.959zm11.841,0l-6.678,0l0,-29.959l6.678,0l0,29.959zm5.5,-8.799l-0.074,-12.375l5.43,6.186l-5.356,6.189z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+       </g>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_394" transform="matrix(1,0,0,1,742,300) ">
+   <g id="svg_395" transform="translate(-6,0) ">
+    <g id="svg_396">
+     <rect id="svg_397" fill-opacity="0" height="14" width="53" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_398" transform="translate(-6,0) ">
+    <g id="svg_399">
+     <rect id="svg_400" fill-opacity="0" height="14" width="53" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_401" transform="translate(-6,0) ">
+    <g id="svg_402">
+     <rect id="svg_403" fill-opacity="0" height="14" width="47" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_404" transform="translate(-6,0) ">
+    <g id="svg_405">
+     <rect id="svg_406" fill-opacity="0" height="14" width="47" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_407" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">Queue</text>
+    <text id="svg_408" y="11" x="49" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">F</text>
+   </g>
+  </g>
+  <g id="svg_409" transform="matrix(1,0,0,1,92.839,118) ">
+   <g id="svg_410">
+    <g id="svg_411">
+     <g id="svg_412">
+      <g id="svg_413">
+       <path id="svg_414" stroke-miterlimit="10" stroke-opacity="0" d="m63.473621,73.080892c-0.042539,-13.730866 -7.081697,-23.177202 -19.354139,-26.760921c7.452392,-4.21697 12.494252,-12.188072 12.494252,-21.314757c-0.001013,-13.51306 -11.041856,-24.505215 -24.613757,-24.505215c-13.570889,0 -24.612745,10.992155 -24.612745,24.505215c0,9.158953 5.076296,17.154255 12.571227,21.359125c-12.190403,3.654304 -19.387563,13.205509 -19.432127,26.717561c-0.071911,0.538465 -0.066847,1.728333 0.986495,3.088613c3.253205,4.199828 13.510119,6.329489 30.48715,6.329489c16.977031,0 27.23597,-2.129661 30.488163,-6.329489c1.052329,-1.361289 1.058406,-2.550148 0.985482,-3.089621z" stroke="rgb(0,0,0)" fill="#cc0000"/>
+      </g>
+      <g id="svg_415">
+       <path id="svg_416" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m31.999976,3.525086c-11.89567,0 -21.574259,9.635908 -21.574259,21.480128c0,9.353566 6.047599,17.308535 14.445972,20.248918c2.235312,0.782489 4.627613,1.23121 7.128287,1.23121c2.517892,0 4.927411,-0.454771 7.176903,-1.248352c8.374066,-2.954501 14.397357,-10.895352 14.397357,-20.230768c0,-11.845229 -9.677576,-21.481137 -21.574259,-21.481137z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+      <g id="svg_417">
+       <path id="svg_418" stroke-miterlimit="10" stroke-opacity="0" opacity="0.93" d="m3.564817,73.206938l-0.021269,0.351918c0.021269,0.154279 0.122552,0.51729 0.585415,1.010379c1.382511,1.475234 6.865964,4.90669 27.871014,4.90669c21.744414,0 26.88148,-3.602878 28.082695,-5.151722c0.277515,-0.359985 0.403106,-0.731062 0.403106,-0.731062l-0.050641,-0.386203c0,-13.792376 -7.533418,-22.568151 -20.946306,-24.860158c-2.363942,0.753246 -4.878795,1.16365 -7.490879,1.16365c-2.590815,0 -5.087437,-0.403345 -7.434161,-1.146508c-13.284258,2.347467 -20.998973,11.263404 -20.998973,24.843016z" stroke="rgb(0,0,0)" fill="#FFFFFF"/>
+      </g>
+     </g>
+    </g>
+   </g>
+  </g>
+  <g id="svg_419" transform="matrix(1,0,0,1,102,202) ">
+   <g id="svg_420" transform="translate(-6,0) ">
+    <g id="svg_421">
+     <rect id="svg_422" fill-opacity="0" height="14" width="43" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_423" transform="translate(-6,0) ">
+    <g id="svg_424">
+     <rect id="svg_425" fill-opacity="0" height="14" width="43" y="0" x="6" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_426" transform="translate(-6,0) ">
+    <g id="svg_427">
+     <rect id="svg_428" fill-opacity="0" height="14" width="37" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+   </g>
+   <g id="svg_429" transform="translate(-6,0) ">
+    <g id="svg_430">
+     <rect id="svg_431" fill-opacity="0" height="14" width="37" y="0" x="9" fill="rgb(0,0,0)"/>
+    </g>
+    <text id="svg_432" y="11" x="9" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">User</text>
+    <text id="svg_433" y="11" x="38" font-weight="normal" font-style="normal" font-size="12px" font-family="Arial" fill="rgb(0, 0, 0)">A</text>
+   </g>
+  </g>
+ </g>
+</svg>
