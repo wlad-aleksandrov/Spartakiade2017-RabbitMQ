@@ -11,7 +11,9 @@ namespace FP.Spartakiade2017.MsRmq.Cluster.Capture
             IBus myBus = null;
             try
             {
-                
+                myBus = RabbitHutch.CreateBus("host=localhost:5672,localhost:5673,localhost:5674");
+
+
                 //PublishManual(myBus);
                 PublishAutomatic(myBus);
 
@@ -34,8 +36,14 @@ namespace FP.Spartakiade2017.MsRmq.Cluster.Capture
             Console.WriteLine("Start publish 250 cluster messages");
             for (int i = 0; i < 250; i++)
             {
-                
-                System.Threading.Thread.Sleep(150);
+
+                var msg = new ClusterMessage
+                {
+                    Message = $"Automatic message {i}",
+                    Timestamp = DateTime.UtcNow,
+                    Host = System.Net.Dns.GetHostName()
+                };
+                myBus.Publish(msg);
             }
         }
 
@@ -46,6 +54,13 @@ namespace FP.Spartakiade2017.MsRmq.Cluster.Capture
             {
                 Console.WriteLine("Enter the message or nothing to leave");
                 message = Console.ReadLine();
+                var msg = new ClusterMessage
+                {
+                    Message = message,
+                    Timestamp = DateTime.UtcNow,
+                    Host = System.Net.Dns.GetHostName()
+                };
+                myBus.Publish(msg);
                 
             } while (string.IsNullOrEmpty(message));
 

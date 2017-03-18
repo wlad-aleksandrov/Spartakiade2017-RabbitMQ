@@ -8,6 +8,6 @@ namespace FP.Spartakiade2017.MsRmq.Cluster.Contracts
 
         public string Host { get; set; }
 
-        public DateTime Timestamep { get; set; }
+        public DateTime Timestamp { get; set; }
     }
 }
