@@ -1,20 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.9
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{22A127EE-8DF7-4AA3-A3D3-D3222623A288}"
-	ProjectSection(SolutionItems) = preProject
-		global.json = global.json
-	EndProjectSection
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "Connecting", "Connecting\Connecting.xproj", "{EF7BCAEF-95A1-49CC-9EAF-1C04F80B4EED}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Connecting", "Connecting\Connecting.csproj", "{EF7BCAEF-95A1-49CC-9EAF-1C04F80B4EED}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "PublishSubscribe", "PublishSubscribe\PublishSubscribe.xproj", "{D0158F1D-EF9F-4A11-871C-3EE66C67ABB1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PublishSubscribe", "PublishSubscribe\PublishSubscribe.csproj", "{D0158F1D-EF9F-4A11-871C-3EE66C67ABB1}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "RequestResponse", "RequestResponse\RequestResponse.xproj", "{6ADA49E6-C39A-46FE-8FE7-AC37875EC86E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RequestResponse", "RequestResponse\RequestResponse.csproj", "{6ADA49E6-C39A-46FE-8FE7-AC37875EC86E}"
 EndProject
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "TopicBasedRouting", "TopicBasedRouting\TopicBasedRouting.xproj", "{B9EC8206-1546-4DE7-820E-60571ABC0817}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TopicBasedRouting", "TopicBasedRouting\TopicBasedRouting.csproj", "{B9EC8206-1546-4DE7-820E-60571ABC0817}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

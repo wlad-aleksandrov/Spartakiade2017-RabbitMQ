@@ -11,8 +11,8 @@ namespace FP.Spartakiade2017.MsRmq.Preparation.PublishSubscribe
             try
             {
                 myBus = RabbitHutch.CreateBus("host=localhost");
-                //SimpleSubscription(myBus);
-                PolymorphicSubscription(myBus);
+                SimpleSubscription(myBus);
+                //PolymorphicSubscription(myBus);
             }
             catch (Exception ex)
             {
